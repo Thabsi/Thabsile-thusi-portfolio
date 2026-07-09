@@ -270,7 +270,6 @@ body.light-mode{
 }
 
 .project-card{
-    align-items:center;
     height:100%;
     background:#0d0d1b;
     display:flex;

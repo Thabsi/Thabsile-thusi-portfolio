@@ -526,7 +526,7 @@ body{
     }
 }
 
-/*@media(max-width:700px){
+@media(max-width:700px){
 
     body{
         padding:20px;
@@ -539,9 +539,9 @@ body{
     .experience-card{
         margin-left:0;
     }
-}*/
+}
 
-/*@media(max-width:768px){
+@media(max-width:768px){
 
     .experience-section{
         grid-template-columns:1fr;
@@ -575,4 +575,4 @@ body{
     .tags{
         justify-content:center;
     }
-} */
+} 

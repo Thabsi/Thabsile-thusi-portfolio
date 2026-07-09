@@ -368,7 +368,7 @@ body{
 
 /* Responsive */
 
-@media(max-width:1000px){
+/*@media(max-width:1000px){
 
 .contact-section{
     grid-template-columns:1fr;
@@ -378,9 +378,9 @@ body{
 .contact-left h1{
     font-size:55px;
 }
-}
+}*/
 
-@media(max-width:992px){
+/*@media(max-width:992px){
 
     .contact-section{
         grid-template-columns:1fr;
@@ -395,9 +395,9 @@ body{
     .contact-right{
         padding:25px;
     }
-}
+} */
 
-@media(max-width:576px){
+/*@media(max-width:576px){
 
     .contact-left h1{
         font-size:40px;
@@ -415,4 +415,4 @@ body{
     .contact-right h2{
         font-size:28px;
     }
-}
+}*/

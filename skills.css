@@ -242,7 +242,7 @@ body{
 
 .card{ 
     width:100%;
-    max-width:500px;
+    max-width:100%;
     background:#0d0d1b;
     border:1px solid rgba(255,255,255,.08);
     border-radius:25px;
@@ -357,6 +357,8 @@ body{
 }
 
 .other-skills-card{
+    width:100%;
+    max-width:100%;
     background:#0d0d1b;
     border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
@@ -481,7 +483,7 @@ body{
     color:#8d8d8d;
 }
 
-@media(max-width:900px){
+/*@media(max-width:900px){
 
     .skills-container{
         grid-template-columns:1fr;
@@ -531,4 +533,4 @@ body{
         width:55px;
         height:55px;
     }
-}
+} */

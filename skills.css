@@ -476,14 +476,13 @@ body{
 }
 
 .footer{
-    margin-top:80px;
     padding:40px 0;
     border-top:1px solid rgba(255,255,255,.08);
     text-align:center;
     color:#8d8d8d;
 }
 
-/*@media(max-width:900px){
+@media(max-width:900px){
 
     .skills-container{
         grid-template-columns:1fr;
@@ -533,4 +532,4 @@ body{
         width:55px;
         height:55px;
     }
-} */
+} 

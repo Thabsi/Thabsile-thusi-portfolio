@@ -432,7 +432,7 @@
     font-size:18px;
 }
 
-.content p{
+.content p{ 
     font-size:14px;
 }
 
@@ -475,7 +475,6 @@
 .experience-card{
     margin-left:0;
 }
-
 }
 
 @media (max-width:768px){

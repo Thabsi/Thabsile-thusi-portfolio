@@ -265,12 +265,15 @@ body.light-mode{
 
 .projects-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
 .project-card{
+    height:100%;
     background:#0d0d1b;
+    display:flex;
+    flex-direction:column;
     border:1px solid rgba(255,46,166,.4);
     border-radius:25px;
     overflow:hidden;
@@ -300,6 +303,8 @@ body.light-mode{
 }
 
 .project-card a{
+    margin:20px;
+    margin-top:auto;
     display:inline-block;
     margin:20px;
     padding:12px 25px;

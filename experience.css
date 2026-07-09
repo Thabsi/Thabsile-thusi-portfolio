@@ -187,12 +187,9 @@ body{
 /* SECTION */
 
 .experience-section{ 
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
-    padding:80px 30px;
-    /*max-width:1200px;
-    margin:auto;
-    padding:100px 30px;*/
+    padding:100px 30px;
     display:grid;
     grid-template-columns:420px 1fr;
     gap:80px;
@@ -502,7 +499,7 @@ body{
     }
 } 
 
-/*@media(max-width:900px){
+@media(max-width:900px){
 
     .left-side h1{
         font-size:60px;

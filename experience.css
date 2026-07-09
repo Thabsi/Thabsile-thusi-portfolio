@@ -186,10 +186,13 @@ body{
 
 /* SECTION */
 
-.experience-section{
-    max-width:1200px;
+.experience-section{ 
+    max-width:1100px;
     margin:auto;
-    padding:100px 30px;
+    padding:80px 30px;
+    /*max-width:1200px;
+    margin:auto;
+    padding:100px 30px;*/
     display:grid;
     grid-template-columns:420px 1fr;
     gap:80px;
@@ -492,14 +495,14 @@ body{
 
 /* RESPONSIVE */
 
-/*@media(max-width:1400px){
+@media(max-width:1400px){
 
     .experience-section{
         grid-template-columns:1fr;
     }
-}
+} 
 
-@media(max-width:900px){
+/*@media(max-width:900px){
 
     .left-side h1{
         font-size:60px;
@@ -519,14 +522,14 @@ body{
         right:0;
         margin-top:20px;
         width:fit-content;
-    }
+    }*/
 
     .stats{
         grid-template-columns:1fr;
     }
 }
 
-@media(max-width:700px){
+/*@media(max-width:700px){
 
     body{
         padding:20px;
@@ -539,9 +542,9 @@ body{
     .experience-card{
         margin-left:0;
     }
-}
+}*/
 
-@media(max-width:768px){
+/*@media(max-width:768px){
 
     .experience-section{
         grid-template-columns:1fr;

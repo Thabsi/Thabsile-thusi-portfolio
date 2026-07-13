@@ -356,17 +356,18 @@ main{
 /* DARK BUTTON */
 
 .dark{
-    border:1px solid rgba(91,140,255,.35);
+    border:1px solid rgba(45,212,191,.35);
     background:rgba(255,255,255,0.05);
-    color:#EAF4FF;
+    color:#F8FAFC;
     backdrop-filter:blur(10px);
 }
 
 .dark:hover{
     border-color:#2DD4BF;
     box-shadow:
-    0 0 15px rgba(91,140,255,.45),
-    0 0 35px rgba(123,97,255,.35);
+        0 0 15px rgba(45,212,191,.45),
+        0 0 35px rgba(45,212,191,.35);
+    transform:translateY(-4px);
 }
 
 /* SOCIAL TEXT */

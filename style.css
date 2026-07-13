@@ -11,20 +11,17 @@ html{
 
 body{
     background:
-    radial-gradient(circle at 15% 20%,
-    rgba(244,114,182,.12),
-    transparent 30%),
-    radial-gradient(circle at 80% 10%,
-    rgba(56,189,248,.15),
-    transparent 35%),
-    radial-gradient(circle at 50% 80%,
-    rgba(124,58,237,.15),
-    transparent 40%),
-    linear-gradient(
-    135deg,
-    #030712,
-    #0F172A,
-    #111827);
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.12),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.08),
+        transparent 45%),
+        linear-gradient(
+        135deg,
+        #020617,
+        #081224,
+        #0F172A);
     color:#F8FAFC;
 }
 
@@ -35,7 +32,7 @@ body::before{
     height:700px;
     top:-250px;
     right:-250px;
-    background:#7C3AED;
+    background:#2DD4BF;
     border-radius:50%;
     filter:blur(220px);
     opacity:.22;
@@ -45,16 +42,15 @@ body::before{
 body::after{
     content:"";
     position:fixed;
-    inset:0;
-    pointer-events:none;
-    background-image:
-        radial-gradient(2px 2px at 10% 20%, white, transparent),
-        radial-gradient(2px 2px at 35% 70%, white, transparent),
-        radial-gradient(1.5px 1.5px at 60% 35%, white, transparent),
-        radial-gradient(2px 2px at 85% 80%, white, transparent),
-        radial-gradient(1.5px 1.5px at 70% 10%, white, transparent);
-    opacity:.6;
-    animation:twinkle 6s ease-in-out infinite alternate;
+    width:600px;
+    height:600px;
+    bottom:-250px;
+    left:-250px;
+    background:#14B8A6;
+    border-radius:50%;
+    filter:blur(220px);
+    opacity:.12;
+    z-index:-2;
 }
 
 @keyframes twinkle{
@@ -93,7 +89,7 @@ main{
 .logo{
     font-size:30px;
     font-weight:bold;
-    color:#38BDF8;
+    color:#2DD4BF;
     cursor:pointer;
 }
 
@@ -123,7 +119,7 @@ main{
 /* ACTIVE LINE */
 
 .navbar a.active{
-    color:#F472B6;
+    color:#2DD4BF;
 }
 
 .navbar a.active::after{
@@ -133,15 +129,15 @@ main{
     bottom:-8px;
     width:100%;
     height:3px;
-    background:#F472B6;
+    background:#2DD4BF;
     border-radius:10px;
-    box-shadow:0 0 15px #F472B6;
+    box-shadow:0 0 15px #2DD4BF;
 }
 
 /* HOVER */
 
 .navbar a:hover{
-    color:#F472B6;
+    color:#5EEAD4;
 }
 
 /* RIGHT SIDE */
@@ -158,7 +154,7 @@ main{
     text-decoration:none;
     padding:14px 28px;
     border-radius:40px;
-    border:2px solid #38BDF8;
+    border:2px solid #2DD4BF;
     background:transparent;
     color:white;
     font-size:16px;
@@ -176,10 +172,10 @@ main{
 /* HOVER EFFECT */
 
 .download-btn:hover{
-    background:#38BDF8;
+    background:#2DD4BF;
     box-shadow:
-    0 0 15px #38BDF8,
-    0 0 40px #38BDF8;
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
     transform:translateY(-2px);
 }
 
@@ -189,13 +185,13 @@ main{
     width:55px;
     height:55px;
     border-radius:50%;
-    border:2px solid #38BDF8;
+    border:2px solid #2DD4BF;
     display:flex;
     align-items:center;
     justify-content:center;
     cursor:pointer;
     transition:0.4s;
-    color:#38BDF8;
+    color:#2DD4BF;
     font-size:22px;
 }
 
@@ -206,11 +202,11 @@ main{
 /* GLOW */
 
 .theme-btn:hover{
-    background:#38BDF8;
+    background:#2DD4BF;
     color:white;
     box-shadow:
-    0 0 15px #38BDF8,
-    0 0 35px #38BDF8;
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
     transform:rotate(180deg);
 }
 
@@ -302,10 +298,10 @@ main{
 }
 
 .hero-content h1 span{
-    color:#38BDF8;
+    color:#2DD4BF;
     text-shadow:
-    0 0 15px rgba(56,189,248,.7),
-    0 0 35px rgba(56,189,248,.5);
+        0 0 12px rgba(45,212,191,.6),
+        0 0 30px rgba(45,212,191,.45);
 }
 
 /* PARAGRAPH */
@@ -345,11 +341,12 @@ main{
 .pink{
     background:linear-gradient(
     135deg,
-    #F472B6,
-    #7C3AED);
+    #2DD4BF,
+    #14B8A6);
+    color:#fff;
     box-shadow:
-    0 0 25px rgba(244,114,182,.35),
-    0 0 50px rgba(124,58,237,.35);
+        0 0 20px rgba(45,212,191,.4),
+        0 0 40px rgba(45,212,191,.3);
 }
 
 .pink:hover{
@@ -427,8 +424,8 @@ main{
 .social-icons a:hover{
     transform:translateY(-8px) scale(1.1);
     box-shadow:
-     0 0 20px rgba(91,140,255,.7),
-     0 0 45px rgba(91,140,255,.45);
+        0 0 20px rgba(45,212,191,.7),
+        0 0 45px rgba(45,212,191,.4);
 }
 
 /* RIGHT IMAGE */
@@ -449,12 +446,12 @@ main{
     height:320px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #F472B6;
+    border:5px solid #2DD4BF;
     z-index:10;
     position:relative;
     box-shadow:
-    0 0 25px rgba(56,189,248,.6),
-    0 0 55px rgba(56,189,248,.4);
+        0 0 25px rgba(45,212,191,.6),
+        0 0 55px rgba(45,212,191,.35);
 }
 
 /* Spiral circles */
@@ -463,7 +460,7 @@ main{
     border-color:#5B8CFF;
     position:absolute;
     border-radius:50%;
-    border:2px solid #38BDF8;
+    border:2px solid #2DD4BF;
     animation:spin 15s linear infinite;
 }
 
@@ -481,7 +478,7 @@ main{
 .circle2{
     width:390px;
     height:390px;
-    border:3px dotted #F472B6;
+    border:3px dotted #5EEAD4;
     animation-direction:reverse;
 }
 
@@ -490,7 +487,7 @@ main{
 .circle3{
     width:350px;
     height:350px;
-    border:2px dashed #7C3AED;
+    border:2px dashed #14B8A6;
 }
 
 

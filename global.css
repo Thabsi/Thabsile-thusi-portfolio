@@ -38,19 +38,18 @@
 }
 
 .navbar{
+    display:none;
+    flex-direction:column;
     position:absolute;
-    top:100%;
+    top:80px;
     left:0;
     width:100%;
     background:#081224;
-    display:none;
-    flex-direction:column;
-    align-items:center;
-    padding:20px;
-    gap:18px;
-    border-top:1px solid rgba(255,255,255,.08);
+    padding:20px 0;
+    z-index:999;
 }
 
+ /* Show only when JavaScript adds "active" */   
 .navbar.active{
     display:flex;
 }
@@ -58,7 +57,7 @@
 .navbar a{
     width:100%;
     text-align:center;
-    font-size:17px;
+    padding:15px;
 }
 
 .mobile-download{

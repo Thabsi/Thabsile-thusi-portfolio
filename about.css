@@ -28,102 +28,185 @@ body{
         #081224,
         #0F172A);
     color:#F8FAFC;
-    overflow-x:hidden;
-}
+} 
 
-/*=========================================
-  HEADER
-=========================================*/
+main{
+    max-width:1400px;
+    margin:auto;
+} 
+/*HEADER*/
 
 .header{
     width:100%;
-    height:90px;
+    min-height:90px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:0 60px;
+    justify-content:space-between;
+    padding:20px 6%;
     background:rgba(2,10,30,.75);
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
-    border-bottom:1px solid rgba(255,255,255,.06);
+    border-bottom:1px solid rgba(255,255,255,.08);
     position:sticky;
     top:0;
-    z-index:999;
-
+    z-index:1000;
 }
 
 .logo{
     font-size:30px;
+    font-weight:bold;
     color:#2DD4BF;
-    font-weight:700;
+    cursor:pointer;
 }
 
 .logo span{
-    color:#fff;
+    color:white;
     font-size:22px;
+    margin-left:5px;
 }
+
+/* NAVBAR */
 
 .navbar{
     display:flex;
-    gap:40px;
+    align-items:center;
+    gap:25px;
 }
 
 .navbar a{
-    color:#fff;
     text-decoration:none;
-    font-size:17px;
-    transition:.35s;
+    color:#EAF4FF;
+    font-size:18px;
+    font-weight:500;
     position:relative;
+    transition:0.3s;
 }
+
+/* ACTIVE LINE */
+
+.navbar a.active{
+    color:#2DD4BF;
+}
+
+.navbar a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:3px;
+    background:#2DD4BF;
+    border-radius:10px;
+    box-shadow:0 0 15px #2DD4BF;
+}
+
+/* HOVER */
 
 .navbar a:hover{
   color:#5EEAD4;
 }
 
-.navbar .active{
-    color:#2DD4BF;
-}
-
-.navbar .active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-10px;
-    width:100%;
-    height:3px;
-    background:#2DD4BF;
-    box-shadow:0 0 12px #2DD4BF;
-    border-radius:30px;
-}
-
-/*=========================================
- RIGHT
-=========================================*/
+/* RIGHT SIDE */
 
 .right-section{
     display:flex;
     align-items:center;
+    gap:20px;
 }
+
+/* DOWNLOAD BUTTON */
 
 .download-btn{
-    padding:14px 28px;
-    border-radius:50px;
-    border:2px solid #2DD4BF;
-    color:#fff;
     text-decoration:none;
-    transition:.4s;
+    padding:14px 28px;
+    border-radius:40px;
+    border:2px solid #2DD4BF;
+    background:transparent;
+    color:white;
+    font-size:16px;
     font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
 }
 
+/* ICON */
+
 .download-btn i{
-    margin-right:8px;
+    margin-right:10px;
 }
+
+/* HOVER EFFECT */
 
 .download-btn:hover{
     background:#2DD4BF;
     box-shadow:
-    0 0 20px #ff2ea6,
-    0 0 45px rgba(255,46,166,.45);
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
+    transform:translateY(-2px);
+}
+
+/* LIGHT BUTTON */
+
+.theme-btn{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:2px solid #2DD4BF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.4s;
+    color:#2DD4BF;
+    font-size:22px;
+}
+
+.light-mode{
+    background:#ffffff;
+    color:#111111;
+}
+/* GLOW */
+
+.theme-btn:hover{
+    background:#2DD4BF;
+    color:white;
+    box-shadow:
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
+    transform:rotate(180deg);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .navbar{
+        gap:20px;
+    }
+
+    .navbar a{
+        font-size:15px;
+    }
+
+    .download-btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+}
+
+@media(max-width:900px){
+
+    .header{
+        flex-direction:column;
+        height:auto;
+        gap:20px;
+        padding:20px;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 }
 
 /*=========================================

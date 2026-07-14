@@ -49,3 +49,30 @@ filterBtns.forEach(btn => {
         });
     });
 });
+
+//MENU TOGGLE
+const menu = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menu.addEventListener("click", () => {
+
+    navbar.classList.toggle("active");
+
+    if(navbar.classList.contains("active")){
+        menu.innerHTML='<i class="fa-solid fa-xmark"></i>';
+    }else{
+        menu.innerHTML='<i class="fa-solid fa-bars"></i>';
+    }
+
+});
+
+document.querySelectorAll(".navbar a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        navbar.classList.remove("active");
+        menu.innerHTML='<i class="fa-solid fa-bars"></i>';
+
+    });
+
+});

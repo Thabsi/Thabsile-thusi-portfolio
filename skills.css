@@ -345,11 +345,14 @@ main{
 }
 
 .card:hover{
-    border-color:#2DD4BF;
-    box-shadow:
-        0 0 25px rgba(45,212,191,.25),
-        0 10px 40px rgba(0,0,0,.35);
     transform:translateY(-8px) scale(1.02);
+    border-color:#2DD4BF;
+    background:rgba(15,23,42,.85);
+    box-shadow:
+        0 0 20px rgba(45,212,191,.35),
+        0 0 45px rgba(45,212,191,.18),
+        0 15px 40px rgba(0,0,0,.35);
+    transition:all .35s ease;
 }
 
 .card-header{

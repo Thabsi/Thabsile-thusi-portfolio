@@ -360,10 +360,13 @@
 }
 
 .floating-card{
-    position:static;
+    position:relative;
     width:100%;
     max-width:300px;
-    margin:20px auto;
+    margin:20px auto 0;
+    left:0;
+    bottom:0;
+    transform:none;
 }
 
 .about-content{

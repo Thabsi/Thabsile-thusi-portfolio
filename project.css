@@ -11,21 +11,23 @@ html{
 
 body{
     background:
-    radial-gradient(circle at 15% 20%,
-    rgba(45,212,191,.14),
-    transparent 30%),
-    radial-gradient(circle at 85% 15%,
-    rgba(56,189,248,.12),
-    transparent 35%),
-    radial-gradient(circle at 50% 80%,
-    rgba(20,184,166,.10),
-    transparent 40%),
-    linear-gradient(
-    135deg,
-    #030712,
-    #0F172A,
-    #111827);
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.12),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.08),
+        transparent 45%),
+        linear-gradient(
+        135deg,
+        #020617,
+        #081224,
+        #0F172A);
     color:#F8FAFC;
+}
+
+main{
+    max-width:1400px;
+    margin:auto;
 }
 
 /* HEADER */
@@ -36,7 +38,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 50px;
+    padding:20px 6%;
     background:rgba(2,10,30,.75);
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
@@ -65,12 +67,13 @@ body{
 
 .navbar{
     display:flex;
-    gap:40px;
+    align-items:center;
+    gap:25px;
 }
 
 .navbar a{
     text-decoration:none;
-    color:white;
+    color:#EAF4FF;
     font-size:18px;
     font-weight:500;
     position:relative;
@@ -92,13 +95,13 @@ body{
     height:3px;
     background:#2DD4BF;
     border-radius:10px;
-    box-shadow:0 0 10px #2DD4BF;
+    box-shadow:0 0 15px #2DD4BF;
 }
 
 /* HOVER */
 
 .navbar a:hover{
-    color:#2DD4BF;
+    color:#5EEAD4;
 }
 
 /* RIGHT SIDE */
@@ -135,9 +138,8 @@ body{
 .download-btn:hover{
     background:#2DD4BF;
     box-shadow:
-    0 0 10px #2DD4BF,
-    0 0 20px #2DD4BF,
-    0 0 40px #2DD4BF;
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
     transform:translateY(-2px);
 }
 
@@ -173,9 +175,8 @@ body.light-mode{
     background:#2DD4BF;
     color:white;
     box-shadow:
-    0 0 10px #2DD4BF,
-    0 0 20px #2DD4BF,
-    0 0 50px #2DD4BF;
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
     transform:rotate(180deg);
 }
 

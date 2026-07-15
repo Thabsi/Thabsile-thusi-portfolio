@@ -14,15 +14,20 @@
    MOBILE
 =========================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .header{
     display:flex;
-    flex-direction:row;
     justify-content:space-between;
     align-items:center;
     padding:18px 20px;
     position:relative;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    font-size:22px;
 }
 
 .logo span{
@@ -31,6 +36,10 @@
 
 .menu-toggle{
     display:block;
+    font-size:28px;
+    color:#2DD4BF;
+    cursor:pointer;
+    margin-left:auto;
 }
 
 .right-section{
@@ -38,12 +47,10 @@
 }
 
 .navbar{
-    display:flex !important;
-    align-items:center;
-    gap:25px;
+    display:none;
     flex-direction:column;
     position:absolute;
-    top:80px;
+    top:100%;
     left:0;
     width:100%;
     background:#081224;
@@ -51,7 +58,6 @@
     z-index:999;
 }
 
- /* Show only when JavaScript adds "active" */   
 .navbar.active{
     display:flex;
 }
@@ -59,24 +65,9 @@
 .navbar a{
     width:100%;
     text-align:center;
-    padding:15px;
+    padding:16px;
 }
 
-.mobile-download{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    padding:14px 24px;
-    border:2px solid #2DD4BF;
-    border-radius:40px;
-    color:white;
-    text-decoration:none;
-}
-
-.download-btn{
-    display:none;
-}
 }
 
 /* Default styles */ 

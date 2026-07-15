@@ -32,6 +32,21 @@
     z-index:1001;
 }
 
+    .menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:999;
+}
+
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+    
 .right-section{
     display:none;
 }
@@ -41,22 +56,24 @@
 .navbar{
     position:fixed;
     top:0;
-    right:-280px;
-    width:260px;
+    right:0;
+    width:280px;
     height:100vh;
     background:#081224;
+    box-shadow:-8px 0 30px rgba(0,0,0,.35);
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
     padding:90px 25px;
     gap:20px;
-    transition:.35s ease;
+
+    /* Hide menu off-screen */
+    transform:translateX(100%);
+    transition:transform .35s ease;
     z-index:1000;
-    box-shadow:-10px 0 30px rgba(0,0,0,.4);
 }
 
 .navbar.active{
-    right:0;
+    transform:translateX(0);
 }
 
 .navbar a{

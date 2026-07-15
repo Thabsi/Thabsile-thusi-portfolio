@@ -102,7 +102,7 @@
 }
 
 /*Mobile*/
-@media (max-width:768px){
+/*@media (max-width:768px){
 
 .header{
     padding:15px;
@@ -128,7 +128,7 @@
     width:100%;
     text-align:center;
 }
-}
+} */
 
 /*Small Mobile*/
 @media (max-width:480px){

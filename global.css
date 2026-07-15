@@ -24,50 +24,65 @@
     position:relative;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    font-size:22px;
-}
-
-.logo span{
-    font-size:18px;
-}
-
 .menu-toggle{
     display:block;
-    font-size:28px;
+    font-size:30px;
     color:#2DD4BF;
     cursor:pointer;
-    margin-left:auto;
+    z-index:1001;
 }
 
 .right-section{
     display:none;
 }
 
+/* Side Menu */
+
 .navbar{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
+    position:fixed;
+    top:0;
+    right:-280px;
+    width:260px;
+    height:100vh;
     background:#081224;
-    padding:20px 0;
-    z-index:999;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:90px 25px;
+    gap:20px;
+    transition:.35s ease;
+    z-index:1000;
+    box-shadow:-10px 0 30px rgba(0,0,0,.4);
 }
 
 .navbar.active{
-    display:flex;
+    right:0;
 }
 
 .navbar a{
     width:100%;
-    text-align:center;
-    padding:16px;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    padding:12px 15px;
+    border-radius:10px;
+    transition:.3s;
 }
 
+.navbar a:hover,
+.navbar a.active{
+    background:rgba(45,212,191,.15);
+    color:#2DD4BF;
+}
+
+.download-btn{
+    display:none;
+}
+
+.mobile-download{
+    display:block;
+    margin-top:20px;
+}
 }
 
 /* Default styles */ 

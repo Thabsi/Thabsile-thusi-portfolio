@@ -53,26 +53,25 @@ filterBtns.forEach(btn => {
 //MENU TOGGLE
 const menu = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
+const overlay = document.getElementById("menu-overlay");
 
 menu.addEventListener("click", () => {
 
     navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
 
     if(navbar.classList.contains("active")){
-        menu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menu.innerHTML='<i class="fa-solid fa-xmark"></i>';
     }else{
-        menu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menu.innerHTML='<i class="fa-solid fa-bars"></i>';
     }
 
 });
 
-document.querySelectorAll(".navbar a").forEach(link=>{
+overlay.addEventListener("click",()=>{
 
-    link.addEventListener("click",()=>{
-
-        navbar.classList.remove("active");
-        menu.innerHTML = '<i class="fa-solid fa-bars"></i>';
-
-    });
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+    menu.innerHTML='<i class="fa-solid fa-bars"></i>';
 
 });

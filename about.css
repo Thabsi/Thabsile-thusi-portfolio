@@ -605,7 +605,7 @@ main{
   TABLET
 ==================================================*/
 
-@media(max-width:1100px){
+@media(max-width:1024px){
 
 .about-section{
 grid-template-columns:1fr;
@@ -710,3 +710,39 @@ grid-template-columns:1fr;
 padding:25px;
 }
 }
+
+@media (max-width:480px){
+
+.about-image img{
+    max-width:260px;
+    height:330px;
+}
+
+.photo-bg{
+    width:260px;
+    height:260px;
+}
+
+.about-content h1{
+    font-size:28px;
+}
+
+.about-content p{
+    font-size:14px;
+}
+
+.about-tag{
+    padding:10px 18px;
+    font-size:14px;
+}
+
+.connect-btn{
+    width:100%;
+    justify-content:center;
+}
+
+.values-grid{
+    grid-template-columns:1fr;
+}
+}
+

@@ -398,53 +398,27 @@ main{
     color:#8d8d8d;
 }
 
-/* Responsive */
-
-/*@media(max-width:1000px){
+/*responsive*/
+@media(max-width:768px){
 
 .contact-section{
     grid-template-columns:1fr;
-    padding:40px 20px;
+    padding:60px 20px;
+}
+
+.contact-left{
+    text-align:center;
 }
 
 .contact-left h1{
-    font-size:55px;
+    font-size:40px;
 }
-}*/
 
-/*@media(max-width:992px){
+.contact-right{
+    padding:25px;
+}
 
-    .contact-section{
-        grid-template-columns:1fr;
-        gap:40px;
-        padding:40px 20px;
-    }
-
-    .contact-left h1{
-        font-size:50px;
-    }
-
-    .contact-right{
-        padding:25px;
-    }
-} */
-
-/*@media(max-width:576px){
-
-    .contact-left h1{
-        font-size:40px;
-    }
-
-    .contact-tag{
-        padding:12px 20px;
-        font-size:14px;
-    }
-
-    .contact-card{
-        padding:18px;
-    }
-
-    .contact-right h2{
-        font-size:28px;
-    }
-}*/
+.social-icons{
+    justify-content:center;
+}
+}

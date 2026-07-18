@@ -374,3 +374,108 @@ body.light-mode{
     text-align:center;
     color:#8d8d8d;
 }
+
+/*Responsive*/
+@media (max-width:1024px){
+
+.projects{
+    padding:70px 30px;
+}
+
+.projects h1{
+    font-size:clamp(2.8rem,6vw,4rem);
+}
+
+.filters{
+    gap:15px;
+}
+
+.filters button{
+    padding:12px 24px;
+}
+}
+
+@media(max-width:992px){
+
+.projects{
+    padding:70px 20px;
+}
+
+.projects h1{
+    font-size:55px;
+}
+
+.projects-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:768px){
+.projects-grid{
+    grid-template-columns:1fr;
+}
+
+.projects{
+    padding:50px 20px;
+}
+
+.projects h1{
+    font-size:2.4rem;
+}
+
+.subtitle{
+    font-size:16px;
+}
+
+.filters{
+    gap:12px;
+    flex-direction:column;
+    align-items:center;
+}
+
+.filters button{
+    width:220px;
+}
+
+.project-card h3{
+    font-size:24px;
+}
+
+.project-card img{
+    height:200px;
+}
+
+.view-all a{
+    width:100%;
+    max-width:280px;
+    text-align:center;
+}
+}
+
+@media (max-width:480px){
+
+.projects{
+    padding:40px 15px;
+}
+
+.projects h1{
+    font-size:2rem;
+}
+
+.work-badge{
+    padding:10px 20px;
+    font-size:14px;
+}
+
+.project-card h3{
+    font-size:20px;
+}
+
+.project-card p{
+    font-size:15px;
+}
+
+.project-card img{
+    height:180px;
+}
+}

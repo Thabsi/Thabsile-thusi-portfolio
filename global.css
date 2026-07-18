@@ -250,3 +250,16 @@ ul{
     width:260px;
 }
 }
+
+/* Remove navigation underline */
+.navbar a::before,
+.navbar a::after{
+    content:none !important;
+    display:none !important;
+}
+
+.navbar a{
+    border-bottom:none !important;
+    text-decoration:none !important;
+    box-shadow:none !important;
+}

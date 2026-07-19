@@ -1,11 +1,30 @@
-/* ===============================
-   GOOGLE FONT
-================================== */
+/*==================================================
+  GOOGLE FONT
+==================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* ===============================
-   RESET
-================================== */
+/*==================================================
+  ROOT VARIABLES
+==================================================*/
+:root{
+
+    --bg:#081224;
+    --bg-secondary:#0F172A;
+
+    --primary:#2DD4BF;
+    --primary-hover:#14B8A6;
+
+    --white:#ffffff;
+    --text:#CBD5E1;
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+/*==================================================
+  RESET
+==================================================*/
 *{
     margin:0;
     padding:0;
@@ -18,11 +37,11 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#081224;
-    color:#ffffff;
-    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--white);
     width:100%;
     min-height:100vh;
+    overflow-x:hidden;
 }
 
 img{
@@ -40,208 +59,464 @@ ul{
     list-style:none;
 }
 
-/* ===============================
-   HEADER
-================================== */
+button{
+    font-family:inherit;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/*==================================================
+  HEADER
+==================================================*/
 .header{
+
     position:sticky;
     top:0;
-    z-index:1000;
+    left:0;
+
+    width:100%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:18px 8%;
-    background:rgba(8,18,36,.90);
+
+    background:rgba(8,18,36,.92);
     backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:1000;
+
 }
 
-/* ===============================
-   LOGO
-================================== */
+/*==================================================
+  LOGO
+==================================================*/
 .logo{
+
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:26px;
+
+    font-size:28px;
     font-weight:700;
-    color:#2DD4BF;
+
+    color:var(--primary);
+
 }
 
 .logo span{
-    color:#ffffff;
+
+    color:var(--white);
+
     font-size:20px;
+    font-weight:600;
+
 }
 
-/* ===============================
-   NAVIGATION
-================================== */
+/*==================================================
+  DESKTOP NAVIGATION
+==================================================*/
 .navbar{
+
     display:flex;
     align-items:center;
     gap:35px;
+
 }
 
 .navbar a{
-    position:relative;
-    color:#ffffff;
-    font-weight:500;
-    transition:.3s;
-}
 
-.navbar a i{
-    width:24px;
-    font-size:18px;
-    color:#2DD4BF;
+    position:relative;
+
+    color:var(--white);
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:.3s;
+
 }
 
 .navbar a:hover,
 .navbar a.active{
-    color:#2DD4BF;
+
+    color:var(--primary);
+
 }
 
-/* ===============================
-   RIGHT SECTION
-================================== */
+/* Remove underline */
+.navbar a::before,
+.navbar a::after{
+
+    display:none !important;
+    content:none !important;
+
+}
+
+.navbar a{
+
+    border:none !important;
+    text-decoration:none !important;
+    box-shadow:none !important;
+
+}
+
+/*==================================================
+  RIGHT SECTION
+==================================================*/
 .right-section{
+
     display:flex;
     align-items:center;
+    gap:18px;
+
 }
 
-/* ===============================
-   BUTTONS
-================================== */
+/*==================================================
+  DOWNLOAD BUTTON
+==================================================*/
 .download-btn{
-    margin-top:auto;
-    width:100%;
+
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:10px;
-    padding:12px 22px;
+
+    padding:12px 24px;
+
     border-radius:40px;
-    background:#2DD4BF;
+
+    background:var(--primary);
+
     color:#081224;
+
+    font-size:15px;
     font-weight:600;
+
     transition:.3s;
+
 }
 
 .download-btn:hover{
-    transform:translateY(-2px);
+
+    transform:translateY(-3px);
+
     box-shadow:
-        0 0 20px rgba(45,212,191,.35);
+        0 0 25px rgba(45,212,191,.35);
+
 }
 
-/* ===============================
-   FOOTER
-================================== */
-.footer{
-    padding:25px 20px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.08);
-    margin-top:80px;
-}
+/*==================================================
+  THEME BUTTON
+==================================================*/
+.theme-btn{
 
-.footer p{
-    color:#b8c3d1;
-    font-size:15px;
-}
+    width:48px;
+    height:48px;
 
-/* ===============================
-   HAMBURGER
-================================== */
-.menu-toggle{
-    display:none;
-    font-size:30px;
-    color:#2DD4BF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--primary);
+
     cursor:pointer;
-    z-index:2001;
+
+    transition:.3s;
+
 }
 
-/* ===============================
-   OVERLAY
-================================== */
+.theme-btn:hover{
+
+    background:rgba(45,212,191,.18);
+
+}
+
+/*==================================================
+  HAMBURGER
+==================================================*/
+.menu-toggle{
+
+    display:none;
+
+    font-size:30px;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+}
+
+/*==================================================
+  MOBILE DOWNLOAD
+==================================================*/
+.mobile-download{
+
+    display:none;
+
+}
+
+/*==================================================
+  MENU OVERLAY
+==================================================*/
 .menu-overlay{
+
     position:fixed;
+
     inset:0;
+
     background:rgba(0,0,0,.55);
+
     opacity:0;
     visibility:hidden;
+
     transition:.3s;
-    z-index:1998;
+
+    z-index:998;
+
 }
 
 .menu-overlay.active{
+
     opacity:1;
     visibility:visible;
+
 }
 
-/* ===============================
-   MOBILE
-================================== */
+/*==================================================
+  FOOTER
+==================================================*/
+.footer{
+
+    margin-top:80px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-top:1px solid var(--border);
+
+}
+
+.footer p{
+
+    color:var(--text);
+
+    font-size:15px;
+
+}
+
+/*==================================================
+  MOBILE & TABLET
+==================================================*/
+
 @media (max-width:768px){
 
+/* Header */
+
 .header{
-    padding:18px 20px;
+    padding:16px 20px;
 }
 
-.menu-toggle{
-    display:block;
+/* Logo */
+
+.logo{
+    font-size:24px;
 }
+
+.logo span{
+    font-size:18px;
+}
+
+/* Hide desktop buttons */
 
 .right-section{
     display:none;
 }
 
-/* Side Drawer */
+/* Show hamburger */
+
+.menu-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
 
 .navbar{
 
     position:fixed;
+
     top:0;
     left:0;
+
     width:280px;
     max-width:85vw;
     height:100vh;
+
     background:#081224;
+
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    padding:90px 25px;
-    gap:20px;
+
+    padding:90px 25px 30px;
+
+    gap:12px;
+
     transform:translateX(-100%);
+
     transition:transform .35s ease;
+
+    box-shadow:8px 0 30px rgba(0,0,0,.45);
+
     z-index:1999;
-    box-shadow:8px 0 30px rgba(0,0,0,.40);
+
+    overflow-y:auto;
+
 }
 
 .navbar.active{
     transform:translateX(0);
 }
 
+/* Menu Links */
+
 .navbar a{
 
     width:100%;
-    padding:14px 16px;
-    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 15px;
+
+    border-radius:12px;
+
+    color:#ffffff;
+
     font-size:17px;
+
+    transition:.3s;
+
+}
+
+.navbar a i{
+
+    width:24px;
+
+    text-align:center;
+
+    color:#2DD4BF;
+
 }
 
 .navbar a:hover,
 .navbar a.active{
 
     background:rgba(45,212,191,.12);
+
     color:#2DD4BF;
+
 }
 
-download-btn{
+/* Divider */
+
+.navbar hr{
+
+    width:100%;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.10);
+
+    margin:12px 0;
+
+}
+
+/* Mobile Download */
+
+.mobile-download{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    margin-top:auto;
+
+    padding:14px;
+
+    background:#2DD4BF;
+
+    color:#081224;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+}
+
+.mobile-download:hover{
+
+    background:#14B8A6;
+
+}
+
+/* Mobile Footer */
+
+.mobile-footer{
+
+    width:100%;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+    font-size:13px;
+
     margin-top:20px;
-}
+
+    padding-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.10);
+
 }
 
-/* ===============================
-   SMALL MOBILE
-================================== */
+/* Overlay */
+
+.menu-overlay.active{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+}
+
+/*==================================================
+  SMALL PHONES
+==================================================*/
+
 @media (max-width:480px){
 
 .logo{
@@ -249,81 +524,76 @@ download-btn{
 }
 
 .logo span{
-    font-size:17px;
+    font-size:16px;
 }
 
 .navbar{
     width:260px;
 }
+
 }
 
-/* Remove navigation underline */
-.navbar a::before,
-.navbar a::after{
-    content:none !important;
-    display:none !important;
-}
-
-.navbar a{
-    border-bottom:none !important;
-    text-decoration:none !important;
-    box-shadow:none !important;
-}
-
-.mobile-download{
-    display:none;
-    text-decoration:none;
-}
-
-@media (max-width:768px){
-
-.mobile-download{
-    display:flex !important;
-   text-align:center
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    width:100%;
-    margin-top:auto;
-    padding:14px;
-    background:#2DD4BF;
-    color:#081224;
-    border-radius:40px;
-    font-weight:600;
-}
-}
-
-/* ===========================
-   DARK MODE (Default)
-=========================== */
-
-:root{
-    --bg:#0f172a;
-    --bg2:#111827;
-    --card:#1e293b;
-    --text:#ffffff;
-    --text2:#cbd5e1;
-    --primary:#ff4fa3;
-    --secondary:#2DD4BF;
-    --header:#0b1120;
-    --footer:#0b1120;
-    --border:#2c3a52;
-}
-
-/* ===========================
-   LIGHT MODE
-=========================== */
+/*==================================================
+  LIGHT MODE
+==================================================*/
 
 body.light-mode{
 
-    --bg:#f8fafc;
-    --bg2:#ffffff;
-    --card:#ffffff;
-    --text:#111827;
-    --text2:#4b5563;
-    --primary:#ff4fa3;
-    --secondary:#14b8a6;
-    --header:#ffffff;
-    --footer:#ffffff;
-    --border:#d1d5db;
+    background:#F8FAFC;
+    color:#111827;
+
+}
+
+body.light-mode .header{
+
+    background:rgba(255,255,255,.95);
+
+    border-bottom:1px solid #d1d5db;
+
+}
+
+body.light-mode .logo span,
+body.light-mode .navbar a{
+
+    color:#111827;
+
+}
+
+body.light-mode .navbar{
+
+    background:#ffffff;
+
+}
+
+body.light-mode .navbar a:hover,
+body.light-mode .navbar a.active{
+
+    background:#ECFEFF;
+
+    color:#14B8A6;
+
+}
+
+body.light-mode .theme-btn{
+
+    background:#f3f4f6;
+
+}
+
+body.light-mode .footer{
+
+    border-top:1px solid #d1d5db;
+
+}
+
+body.light-mode .footer p{
+
+    color:#4B5563;
+
+}
+
+body.light-mode .mobile-footer{
+
+    color:#6B7280;
+
 }

@@ -89,6 +89,12 @@ ul{
     transition:.3s;
 }
 
+.navbar a i{
+    width:24px;
+    font-size:18px;
+    color:#2DD4BF;
+}
+
 .navbar a:hover,
 .navbar a.active{
     color:#2DD4BF;
@@ -105,8 +111,7 @@ ul{
 /* ===============================
    BUTTONS
 ================================== */
-.download-btn,
-.mobile-download{
+.download-btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -119,8 +124,7 @@ ul{
     transition:.3s;
 }
 
-.download-btn:hover,
-.mobile-download:hover{
+.download-btn:hover{
     transform:translateY(-2px);
     box-shadow:
         0 0 20px rgba(45,212,191,.35);

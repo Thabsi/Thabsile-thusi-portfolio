@@ -74,20 +74,14 @@ button{
     position:sticky;
     top:0;
     left:0;
-
     width:100%;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:18px 8%;
-
     background:rgba(8,18,36,.92);
     backdrop-filter:blur(14px);
-
     border-bottom:1px solid var(--border);
-
     z-index:1000;
 
 }
@@ -100,10 +94,8 @@ button{
     display:flex;
     align-items:center;
     gap:10px;
-
     font-size:28px;
     font-weight:700;
-
     color:var(--primary);
 
 }
@@ -111,7 +103,6 @@ button{
 .logo span{
 
     color:var(--white);
-
     font-size:20px;
     font-weight:600;
 
@@ -131,14 +122,16 @@ button{
 .navbar a{
 
     position:relative;
-
     color:var(--white);
-
     font-size:16px;
     font-weight:500;
-
     transition:.3s;
 
+}
+
+/* Hide menu icons on Desktop */
+.navbar a i{
+    display:none;
 }
 
 .navbar a:hover,
@@ -417,10 +410,9 @@ button{
 
 .navbar a i{
 
+    display:inline-block;
     width:24px;
-
     text-align:center;
-
     color:#2DD4BF;
 
 }

@@ -301,16 +301,12 @@ download-btn{
     --bg:#0f172a;
     --bg2:#111827;
     --card:#1e293b;
-
     --text:#ffffff;
     --text2:#cbd5e1;
-
     --primary:#ff4fa3;
     --secondary:#2DD4BF;
-
     --header:#0b1120;
     --footer:#0b1120;
-
     --border:#2c3a52;
 }
 
@@ -323,15 +319,11 @@ body.light-mode{
     --bg:#f8fafc;
     --bg2:#ffffff;
     --card:#ffffff;
-
     --text:#111827;
     --text2:#4b5563;
-
     --primary:#ff4fa3;
     --secondary:#14b8a6;
-
     --header:#ffffff;
     --footer:#ffffff;
-
     --border:#d1d5db;
 }

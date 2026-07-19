@@ -50,28 +50,34 @@ filterBtns.forEach(btn => {
     });
 });
 
-//MENU TOGGLE
+// ================= MENU =================
+
 const menu = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
 const overlay = document.getElementById("menu-overlay");
 
-menu.addEventListener("click", () => {
-
+menu.addEventListener("click",()=>{
     navbar.classList.toggle("active");
     overlay.classList.toggle("active");
-
     if(navbar.classList.contains("active")){
         menu.innerHTML='<i class="fa-solid fa-xmark"></i>';
+        document.body.style.overflow="hidden";
     }else{
         menu.innerHTML='<i class="fa-solid fa-bars"></i>';
+        document.body.style.overflow="";
     }
 
 });
 
-overlay.addEventListener("click",()=>{
+overlay.addEventListener("click",closeMenu);
+document.querySelectorAll(".navbar a").forEach(link=>{
+    link.addEventListener("click",closeMenu);
+});
+
+function closeMenu(){
 
     navbar.classList.remove("active");
     overlay.classList.remove("active");
     menu.innerHTML='<i class="fa-solid fa-bars"></i>';
-
-});
+    document.body.style.overflow="";
+}

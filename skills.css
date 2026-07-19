@@ -157,11 +157,6 @@ main{
     font-size:22px;
 }
 
-.light-mode{
-    background:#ffffff;
-    color:#111111;
-}
-
 /* GLOW */
 
 .theme-btn:hover{
@@ -563,4 +558,106 @@ main{
 .content p{ 
     font-size:14px;
 }
+}
+
+/*==========================
+   LIGHT MODE
+===========================*/
+
+body.light-mode{
+    background:
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.08),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.06),
+        transparent 45%),
+        #F8FAFC;
+    color:#000000;
+}
+
+/* Header */
+
+body.light-mode .header{
+    background:rgba(255,255,255,.90);
+    border-bottom:1px solid #d1d5db;
+}
+
+body.light-mode .logo span{
+    color:#000000;
+}
+
+body.light-mode .navbar a{
+    color:#000000;
+}
+
+/* Hero */
+
+body.light-mode .hero-left h1{
+    color:#000000;
+}
+
+body.light-mode .hero-left p{
+    color:#000000;
+}
+
+/* Section */
+
+body.light-mode .section-title h1{
+    color:#000000;
+}
+
+body.light-mode .section-title p{
+    color:#000000;
+}
+
+/* Cards */
+
+body.light-mode .card{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .card-header h2{
+    color:#000000;
+}
+
+body.light-mode .item span{
+    color:#000000;
+}
+
+/* CTA */
+
+body.light-mode .cta{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .cta h2{
+    color:#000000;
+}
+
+body.light-mode .cta p{
+    color:#000000;
+}
+
+/* Download Button */
+
+body.light-mode .download-btn{
+    color:#000000;
+}
+
+/* Dark Button */
+
+body.light-mode .btn.dark{
+    background:#ffffff;
+    color:#000000;
+    border:1px solid #d1d5db;
+}
+
+/* Footer */
+
+body.light-mode .footer{
+    color:#000000;
+    border-top:1px solid #d1d5db;
 }

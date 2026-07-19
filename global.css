@@ -279,18 +279,15 @@ download-btn{
 
 .mobile-download{
     display:flex !important;
+   text-align:center
     align-items:center;
     justify-content:center;
     gap:10px;
-
     width:100%;
     margin-top:auto;
-
     padding:14px;
-
     background:#2DD4BF;
     color:#081224;
-
     border-radius:40px;
     font-weight:600;
 }

@@ -159,11 +159,6 @@ main{
     font-size:22px;
 }
 
-.light-mode{
-    background:#ffffff;
-    color:#111111;
-}
-
 /* GLOW */
 
 .theme-btn:hover{
@@ -623,6 +618,123 @@ background:linear-gradient(135deg,#38BDF8,#0EA5E9);
 
 .content h3{
     font-size:16px;
+}
+
+/*==========================
+   LIGHT MODE
+===========================*/
+
+body.light-mode{
+    background:
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.08),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.06),
+        transparent 45%),
+        #F8FAFC;
+    color:#000000;
+}
+
+/* Header */
+
+body.light-mode .header{
+    background:rgba(255,255,255,.90);
+    border-bottom:1px solid #d1d5db;
+}
+
+body.light-mode .logo span{
+    color:#000000;
+}
+
+body.light-mode .navbar a{
+    color:#000000;
+}
+
+body.light-mode .download-btn{
+    color:#000000;
+}
+
+/* Left Section */
+
+body.light-mode .tag{
+    background:#ffffff;
+    color:#000000;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .left-side h1{
+    color:#000000;
+}
+
+body.light-mode .left-side p{
+    color:#000000;
+}
+
+/* Statistics */
+
+body.light-mode .stat-card{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .stat-card h2{
+    color:#000000;
+}
+
+body.light-mode .stat-card p{
+    color:#000000;
+}
+
+/* Experience Cards */
+
+body.light-mode .experience-card{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .timeline-heading{
+    color:#000000;
+}
+
+body.light-mode .content h2{
+    color:#000000;
+}
+
+body.light-mode .content h3{
+    color:#14B8A6;
+}
+
+body.light-mode .content p,
+body.light-mode .content ul{
+    color:#000000;
+}
+
+/* Education */
+
+body.light-mode .education-box{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .education-box h3,
+body.light-mode .education-box p{
+    color:#000000;
+}
+
+/* Skill Tags */
+
+body.light-mode .tags span{
+    background:#ffffff;
+    color:#000000;
+    border:1px solid #d1d5db;
+}
+
+/* Footer */
+
+body.light-mode .footer{
+    color:#000000;
+    border-top:1px solid #d1d5db;
 }
 
 .icon-circle{

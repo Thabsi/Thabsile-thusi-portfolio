@@ -622,7 +622,7 @@ background:linear-gradient(135deg,#38BDF8,#0EA5E9);
 
 /*==========================
    LIGHT MODE
-===========================*/
+==========================*/
 
 body.light-mode{
     background:
@@ -633,113 +633,68 @@ body.light-mode{
         rgba(45,212,191,.06),
         transparent 45%),
         #F8FAFC;
-    color:#000000;
+    color:#111827;
 }
 
 /* Header */
 
 body.light-mode .header{
-    background:rgba(255,255,255,.90);
+    background:rgba(255,255,255,.9);
     border-bottom:1px solid #d1d5db;
 }
 
-body.light-mode .logo span{
-    color:#000000;
-}
-
+body.light-mode .logo span,
 body.light-mode .navbar a{
-    color:#000000;
+    color:#111827;
 }
 
-body.light-mode .download-btn{
-    color:#000000;
-}
-
-/* Left Section */
+/* Left side */
 
 body.light-mode .tag{
     background:#ffffff;
-    color:#000000;
-    border:1px solid #d1d5db;
-}
-
-body.light-mode .left-side h1{
-    color:#000000;
-}
-
-body.light-mode .left-side p{
-    color:#000000;
-}
-
-/* Statistics */
-
-body.light-mode .stat-card{
-    background:#ffffff;
-    border:1px solid #d1d5db;
-}
-
-body.light-mode .stat-card h2{
-    color:#000000;
-}
-
-body.light-mode .stat-card p{
-    color:#000000;
-}
-
-/* Experience Cards */
-
-body.light-mode .experience-card{
-    background:#ffffff;
-    border:1px solid #d1d5db;
-}
-
-body.light-mode .timeline-heading{
-    color:#000000;
-}
-
-body.light-mode .content h2{
-    color:#000000;
-}
-
-body.light-mode .content h3{
     color:#14B8A6;
+    border:1px solid #d1d5db;
 }
 
+body.light-mode .left-side h1,
+body.light-mode .timeline-heading,
+body.light-mode .content h2,
+body.light-mode .stat-card h2{
+    color:#111827;
+}
+
+body.light-mode .left-side p,
 body.light-mode .content p,
-body.light-mode .content ul{
-    color:#000000;
+body.light-mode .content ul,
+body.light-mode .stat-card p{
+    color:#374151;
 }
 
-/* Education */
+/* Cards */
 
+body.light-mode .experience-card,
+body.light-mode .stat-card,
 body.light-mode .education-box{
     background:#ffffff;
     border:1px solid #d1d5db;
 }
 
-body.light-mode .education-box h3,
-body.light-mode .education-box p{
-    color:#000000;
-}
-
-/* Skill Tags */
+/* Tags */
 
 body.light-mode .tags span{
-    background:#ffffff;
-    color:#000000;
-    border:1px solid #d1d5db;
+    background:#f1f5f9;
+    color:#111827;
+}
+
+body.light-mode .date{
+    background:#ecfeff;
+    color:#0f766e;
 }
 
 /* Footer */
 
 body.light-mode .footer{
-    color:#000000;
+    color:#374151;
     border-top:1px solid #d1d5db;
-}
-
-.icon-circle{
-    width:70px;
-    height:70px;
-    font-size:24px;
 }
 }

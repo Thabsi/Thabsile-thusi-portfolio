@@ -169,10 +169,6 @@ main{
     font-size:22px;
 }
 
-.light-mode{
-    background:#ffffff;
-    color:#111111;
-}
 /* GLOW */
 
 .theme-btn:hover{
@@ -746,3 +742,118 @@ padding:25px;
 }
 }
 
+/*==========================
+   LIGHT MODE
+===========================*/
+
+body.light-mode{
+    background:
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.08),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.06),
+        transparent 45%),
+        #F8FAFC;
+    color:#111827;
+}
+
+/* Header */
+
+body.light-mode .header{
+    background:rgba(255,255,255,.90);
+    border-bottom:1px solid #d1d5db;
+}
+
+body.light-mode .logo span{
+    color:#111827;
+}
+
+body.light-mode .navbar a{
+    color:#111827;
+}
+
+/* About */
+
+body.light-mode .about-content h1{
+    color:#111827;
+}
+
+body.light-mode .about-content p{
+    color:#4b5563;
+}
+
+body.light-mode .about-tag{
+    background:#ffffff;
+    color:#14B8A6;
+}
+
+/* Floating Card */
+
+body.light-mode .floating-card{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .info h4{
+    color:#111827;
+}
+
+body.light-mode .info p{
+    color:#4b5563;
+}
+
+/* Statistics */
+
+body.light-mode .stats-container{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .stat-item{
+    background:#ffffff;
+}
+
+body.light-mode .stat-item h2{
+    color:#111827;
+}
+
+body.light-mode .stat-item p{
+    color:#4b5563;
+}
+
+/* Cards */
+
+body.light-mode .info-card{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+body.light-mode .info-card h2{
+    color:#111827;
+}
+
+body.light-mode .info-card p{
+    color:#4b5563;
+}
+
+body.light-mode .value h4{
+    color:#111827;
+}
+
+body.light-mode .value p{
+    color:#4b5563;
+}
+
+/* Button */
+
+body.light-mode .connect-btn{
+    color:#ffffff;
+}
+
+/* Footer */
+
+body.light-mode .footer{
+    color:#4b5563;
+    border-top:1px solid #d1d5db;
+}

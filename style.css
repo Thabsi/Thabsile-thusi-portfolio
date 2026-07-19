@@ -195,10 +195,6 @@ main{
     font-size:22px;
 }
 
-.light-mode{
-    background:#ffffff;
-    color:#111111;
-}
 /* GLOW */
 
 .theme-btn:hover{
@@ -518,32 +514,6 @@ main{
     color:#94A3B8;
 }
 
-body.light-mode{
-    background:#f3f5fb;
-    color:#121212;
-}
-
-body.light-mode .header,
-body.light-mode .profile-card,
-body.light-mode .info-card{
-    background:#ffffff;
-    color:#121212;
-}
-
-body.light-mode .navbar a,
-body.light-mode .hero-content p,
-body.light-mode .profile-card p,
-body.light-mode .info-card p,
-body.light-mode .footer{
-    color:#4a4a4a;
-}
-
-body.light-mode .tag,
-body.light-mode .btn.dark,
-body.light-mode .social-icons a{
-    background:rgba(17,17,17,0.06);
-    color:#121212;
-}
 
 /*Responsive*/
 @media (max-width:1024px){
@@ -724,4 +694,86 @@ body.light-mode .social-icons a{
 .navbar a{
     font-size:15px;
 }
+}
+
+/* ===========================
+   LIGHT MODE
+=========================== */
+
+body.light-mode{
+    background:
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.08),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.06),
+        transparent 45%),
+        #F8FAFC;
+    color:#111827;
+}
+
+/* Header */
+
+body.light-mode .header{
+    background:rgba(255,255,255,.90);
+    border-bottom:1px solid #d1d5db;
+}
+
+/* Logo */
+
+body.light-mode .logo span{
+    color:#111827;
+}
+
+/* Navigation */
+
+body.light-mode .navbar a{
+    color:#111827;
+}
+
+/* Hero */
+
+body.light-mode .hero-content h1{
+    color:#111827;
+}
+
+body.light-mode .hero-content p{
+    color:#4b5563;
+}
+
+body.light-mode .social-text{
+    color:#4b5563;
+}
+
+/* Buttons */
+
+body.light-mode .download-btn{
+    color:#111827;
+}
+
+body.light-mode .dark{
+    background:#ffffff;
+    color:#111827;
+    border:1px solid #d1d5db;
+}
+
+/* Tag */
+
+body.light-mode .tag{
+    background:#ffffff;
+    color:#14B8A6;
+}
+
+/* Social Icons */
+
+body.light-mode .social-icons a{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+/* Footer */
+
+body.light-mode .footer{
+    color:#4b5563;
+    border-top:1px solid #d1d5db;
 }

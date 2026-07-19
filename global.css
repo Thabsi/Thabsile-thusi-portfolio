@@ -269,3 +269,27 @@ download-btn{
     text-decoration:none !important;
     box-shadow:none !important;
 }
+
+.mobile-download{
+    display:none;
+}
+
+@media (max-width:768px){
+
+.mobile-download{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:100%;
+    margin-top:auto;
+
+    padding:14px;
+
+    background:#2DD4BF;
+    color:#081224;
+
+    border-radius:40px;
+    font-weight:600;
+}

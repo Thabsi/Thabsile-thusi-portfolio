@@ -112,6 +112,8 @@ ul{
    BUTTONS
 ================================== */
 .download-btn{
+    margin-top:auto;
+    width:100%;
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -232,7 +234,7 @@ ul{
     color:#2DD4BF;
 }
 
-.mobile-download{
+download-btn{
     margin-top:20px;
 }
 }

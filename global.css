@@ -272,12 +272,13 @@ download-btn{
 
 .mobile-download{
     display:none;
+    text-decoration:none;
 }
 
 @media (max-width:768px){
 
 .mobile-download{
-    display:flex;
+    display:flex !important;
     align-items:center;
     justify-content:center;
     gap:10px;

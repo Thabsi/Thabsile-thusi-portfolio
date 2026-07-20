@@ -206,25 +206,23 @@ main{
 /* SECTION */
 
 .experience-section{ 
-    max-width:1400px;
+    max-width:1200px;
     margin:auto;
-    padding:90px 5%;
+    padding:100px 30px;
     display:grid;
-    grid-template-columns:380px 1fr;
-    gap:70px;
-    align-items:start;
+    grid-template-columns:420px 1fr;
+    gap:80px;
+    align-items:center;
 }
 
 /* LEFT */
 
 .left-side{
-    position:sticky;
-    top:120px;
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     justify-content:center;
-    text-align:left;
+    text-align:center;
 }
 
 /* TAG */
@@ -351,7 +349,7 @@ main{
 
 .timeline{
     position:absolute;
-    left:42px;
+    left:50px;
     top:0;
     width:3px;
     height:100%;
@@ -375,7 +373,7 @@ main{
     align-items:flex-start;
     gap:25px;
     position:relative;
-    margin-left:65px;
+    margin-left:80px;
     transition:0.4s;
     backdrop-filter:blur(20px);
 }

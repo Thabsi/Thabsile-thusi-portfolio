@@ -527,130 +527,177 @@ background:linear-gradient(135deg,#38BDF8,#0EA5E9);
 
 /* RESPONSIVE */
 
-@media (max-width:1024px){
+@media(max-width:1024px){
 
 .experience-section{
-    grid-template-columns:1fr;
-    gap:60px;
-    padding:70px 5%;
-}
 
-.left-side{
-    position:relative;
-    top:0;
-    align-items:center;
-    text-align:center;
-}
-
-.left-side h1{
-    font-size:clamp(2.5rem,6vw,3.5rem);
+padding:70px 30px;
 }
 
 .stats{
-    grid-template-columns:repeat(3,1fr);
-    width:100%;
+
+grid-template-columns:repeat(3,1fr);
 }
 
 .timeline{
-    display:none;
-}
 
-.timeline-heading{
-    margin-left:0;
-    justify-content:center;
-    text-align:center;
+left:34px;
 }
 
 .experience-card{
-    margin-left:0;
-    width:100%;
+
+margin-left:65px;
+padding:30px 30px 30px 85px;
 }
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
-.experience-section{
-    padding:40px 20px;
+.timeline{
+
+left:22px;
 }
 
-.left-side h1{
-    font-size:2.2rem;
+.icon-circle{
+
+width:58px;
+height:58px;
+left:-28px;
 }
 
-.left-side p{
-    font-size:16px;
-}
+.icon-circle i{
 
-.girl-image img{
-    width:100%;
-}
-
-.stats{
-    grid-template-columns:1fr;
+font-size:22px;
 }
 
 .experience-card{
-    flex-direction:column;
-    padding:25px;
-}
 
-.date{
-    position:relative;
-    top:0;
-    right:0;
-    margin-top:20px;
-    width:fit-content;
-}
-
-.timeline-heading{
-    font-size:2rem;
-    justify-content:center;
-}
-
-.tags{
-    justify-content:center;
-}
-}
-
-@media (max-width:480px){
-
-.experience-section{
-    padding:30px 15px;
-}
-
-.left-side h1{
-    font-size:2rem;
-}
-
-.tag{
-    padding:10px 18px;
-    font-size:14px;
+margin-left:45px;
+padding:25px 20px 25px 55px;
 }
 
 .content h2{
-    font-size:22px;
+
+font-size:24px;
 }
 
 .content h3{
-    font-size:16px;
+
+font-size:18px;
 }
 
+.stats{
+
+grid-template-columns:1fr;
+}
+
+.left-side p{
+
+font-size:17px;
+max-width:100%;
+}
+}
+
+@media(max-width:480px){
+
+.timeline{
+
+left:18px;
+}
+
+.icon-circle{
+
+width:50px;
+height:50px;
+left:-24px;
+}
+
+.icon-circle i{
+
+font-size:18px;
+}
+
+.experience-card{
+
+margin-left:35px;
+padding:20px 18px 20px 45px;
+}
+
+.content h2{
+
+font-size:20px;
+}
+
+.content h3{
+
+font-size:16px;
+}
+
+.date{
+
+font-size:12px;
+padding:6px 12px;
+}
+}
 /*==========================
    LIGHT MODE
 ==========================*/
 
 body.light-mode{
-    background:
-        radial-gradient(circle at top right,
-        rgba(45,212,191,.08),
-        transparent 35%),
-        radial-gradient(circle at bottom left,
-        rgba(45,212,191,.06),
-        transparent 45%),
-        #F8FAFC;
-    color:#111827;
+
+background:
+radial-gradient(circle at top right,
+rgba(45,212,191,.12),
+transparent 35%),
+radial-gradient(circle at bottom left,
+rgba(56,189,248,.08),
+transparent 40%),
+linear-gradient(
+135deg,
+#F8FAFC,
+#EEF6FF,
+#F4F7FB);
+color:#111827;
 }
 
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3{
+color:#0F172A;
+}
+
+body.light-mode p,
+body.light-mode li{
+color:#475569;
+}
+
+body.light-mode .navbar a{
+color:#334155;
+}
+
+body.light-mode .navbar a:hover{
+color:#14B8A6;
+}
+
+body.light-mode .navbar a.active{
+color:#14B8A6;
+}
+
+body.light-mode .download-btn{
+background:#2DD4BF;
+color:#fff;
+border:none;
+}
+
+body.light-mode .download-btn:hover{
+background:#14B8A6;
+}
+
+body.light-mode .theme-btn{
+background:#fff;
+border:2px solid #2DD4BF;
+color:#14B8A6;
+}
 /* Header */
 
 body.light-mode .header{
@@ -690,20 +737,37 @@ body.light-mode .stat-card p{
 body.light-mode .experience-card,
 body.light-mode .stat-card,
 body.light-mode .education-box{
-    background:#ffffff;
-    border:1px solid #d1d5db;
+
+background:rgba(255,255,255,.82);
+backdrop-filter:blur(18px);
+border:1px solid rgba(45,212,191,.18);
+box-shadow:
+0 10px 30px rgba(15,23,42,.08);
 }
 
 /* Tags */
 
 body.light-mode .tags span{
-    background:#f1f5f9;
-    color:#111827;
+
+background:#ECFEFF;
+color:#0F172A;
+border:1px solid rgba(45,212,191,.25);
+}
+
+body.light-mode .timeline{
+
+background:linear-gradient(
+to bottom,
+#2DD4BF,
+#14B8A6);
+box-shadow:0 0 15px rgba(45,212,191,.35);
 }
 
 body.light-mode .date{
-    background:#ecfeff;
-    color:#0f766e;
+
+background:#D1FAE5;
+border:1px solid #6EE7B7;
+color:#065F46;
 }
 
 /* Footer */

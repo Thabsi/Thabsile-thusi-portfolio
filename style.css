@@ -536,15 +536,19 @@ main{
 }
 
 .hero{
-    flex-direction:column;
+    display:flex;
+    flex-direction:column-reverse; /* Image on top */
+    align-items:center;
     justify-content:center;
     text-align:center;
-    gap:50px;
-    padding:60px 20px;
+    gap:40px;
+    padding:50px 25px;
+    min-height:auto;
 }
 
 .hero-content{
-    max-width:100%;
+    order:2;
+    max-width:700px;
 }
 
 .buttons,
@@ -553,8 +557,13 @@ main{
 }
 
 .hero-image{
+    order:1;
     width:100%;
-    height:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:10px;
+    margin-bottom:20px;
 }
 
 .hero-image img{
@@ -598,12 +607,16 @@ main{
 }
 
 .hero{
-    padding:40px 20px;
-    gap:40px;
+    display:flex;
+    flex-direction:column-reverse; /* Image first */
+    align-items:center;
+    text-align:center;
+    padding:35px 20px;
+    gap:30px;
 }
 
 .hero-content h1{
-    font-size:clamp(2rem,8vw,3rem);
+    font-size:2.5rem;
 }
 
 .hero-content p{
@@ -612,34 +625,40 @@ main{
 
 .buttons{
     flex-direction:column;
+    width:100%;
 }
 
 .btn{
     width:100%;
 }
 
+.hero-image{
+    margin-top:0;
+    margin-bottom:15px;
+}
+    
 .hero-image img{
     width:240px;
     height:240px;
 }
 
 .circle1{
-    width:310px;
-    height:310px;
+    width:300px;
+    height:300px;
 }
 
 .circle2{
-    width:280px;
-    height:280px;
+    width:270px;
+    height:270px;
 }
 
 .circle3{
-    width:250px;
-    height:250px;
+    width:240px;
+    height:240px;
 }
 
 .social-icons{
-    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .social-icons a{
@@ -652,7 +671,8 @@ main{
 @media (max-width:480px){
 
 .hero{
-    padding:30px 15px;
+    padding:25px 15px;
+    gap:25px;
 }
 
 .hero-content h1{
@@ -669,18 +689,18 @@ main{
 }
 
 .circle1{
-    width:260px;
-    height:260px;
+    width:250px;
+    height:250px;
 }
 
 .circle2{
-    width:235px;
-    height:235px;
+    width:225px;
+    height:225px;
 }
 
 .circle3{
-    width:210px;
-    height:210px;
+    width:200px;
+    height:200px;
 }
 
 .logo{
@@ -771,6 +791,34 @@ body.light-mode .social-icons a{
     border:1px solid #d1d5db;
 }
 
+body.light-mode .social-icons a:nth-child(2){
+    background:#111827;   /* Black background */
+    color:#ffffff;        /* White GitHub icon */
+    border:1px solid #111827;
+}
+
+body.light-mode .social-icons a:nth-child(2):hover{
+    background:#000000;
+    color:#ffffff;
+    border-color:#000000;
+    box-shadow:
+        0 0 15px rgba(17,24,39,.4),
+        0 0 30px rgba(17,24,39,.25);
+}
+
+body.light-mode .btn.dark{
+    background:#111827;
+    color:#ffffff;
+    border:1px solid #111827;
+}
+
+body.light-mode .btn.dark:hover{
+    background:#000000;
+    border-color:#000000;
+    box-shadow:
+        0 0 15px rgba(17,24,39,.35),
+        0 0 30px rgba(17,24,39,.2);
+}
 /* Footer */
 
 body.light-mode .footer{

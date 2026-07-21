@@ -519,33 +519,40 @@ main{
 @media (max-width:1024px){
 
 .header{
+    padding:18px 5%;
     flex-direction:column;
-    gap:20px;
-    padding:20px;
+    gap:18px;
 }
 
 .navbar{
-    flex-wrap:wrap;
     justify-content:center;
-    gap:18px;
+    flex-wrap:wrap;
+    gap:16px;
 }
 
 .right-section{
     justify-content:center;
-    flex-wrap:wrap;
 }
 
 .hero{
     display:flex;
-    flex-direction:column-reverse; /* Image on top */
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
     text-align:center;
-    gap:40px;
+    gap:35px;
     padding:50px 25px;
     min-height:auto;
 }
 
+/* Image first */
+.hero-image{
+    order:1;
+    width:380px;
+    height:380px;
+    margin:0 auto;
+}
+
+/* Text second */
 .hero-content{
     order:2;
     max-width:700px;
@@ -556,34 +563,24 @@ main{
     justify-content:center;
 }
 
-.hero-image{
-    order:1;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-top:10px;
-    margin-bottom:20px;
-}
-
 .hero-image img{
-    width:280px;
-    height:280px;
+    width:270px;
+    height:270px;
 }
 
 .circle1{
-    width:360px;
-    height:360px;
+    width:350px;
+    height:350px;
 }
 
 .circle2{
-    width:330px;
-    height:330px;
+    width:320px;
+    height:320px;
 }
 
 .circle3{
-    width:300px;
-    height:300px;
+    width:290px;
+    height:290px;
 }
 }
 
@@ -601,45 +598,49 @@ main{
     font-size:18px;
 }
 
-.download-btn{
-    width:100%;
-    text-align:center;
-}
-
 .hero{
     display:flex;
-    flex-direction:column-reverse; /* Image first */
+    flex-direction:column;
     align-items:center;
     text-align:center;
-    padding:35px 20px;
     gap:30px;
+    padding:35px 20px;
+}
+
+.hero-image{
+    order:1;
+    width:320px;
+    height:320px;
+    margin:0 auto;
+}
+
+.hero-content{
+    order:2;
 }
 
 .hero-content h1{
-    font-size:2.5rem;
+    font-size:2.4rem;
+    line-height:1.2;
 }
 
 .hero-content p{
     font-size:16px;
+    line-height:1.7;
 }
 
 .buttons{
     flex-direction:column;
-    width:100%;
+    align-items:center;
+    gap:15px;
 }
 
 .btn{
-    width:100%;
+    width:240px;
 }
 
-.hero-image{
-    margin-top:0;
-    margin-bottom:15px;
-}
-    
 .hero-image img{
-    width:240px;
-    height:240px;
+    width:230px;
+    height:230px;
 }
 
 .circle1{
@@ -675,17 +676,14 @@ main{
     gap:25px;
 }
 
-.hero-content h1{
-    font-size:2rem;
-}
-
-.hero-content p{
-    font-size:15px;
+.hero-image{
+    width:270px;
+    height:270px;
 }
 
 .hero-image img{
-    width:200px;
-    height:200px;
+    width:190px;
+    height:190px;
 }
 
 .circle1{
@@ -694,13 +692,26 @@ main{
 }
 
 .circle2{
-    width:225px;
-    height:225px;
+    width:220px;
+    height:220px;
 }
 
 .circle3{
-    width:200px;
-    height:200px;
+    width:195px;
+    height:195px;
+}
+
+.hero-content h1{
+    font-size:2rem;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.btn{
+    width:100%;
+    max-width:220px;
 }
 
 .logo{
@@ -715,7 +726,6 @@ main{
     font-size:15px;
 }
 }
-
 /* ===========================
    LIGHT MODE
 =========================== */

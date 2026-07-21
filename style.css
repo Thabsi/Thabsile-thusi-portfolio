@@ -266,8 +266,8 @@ main{
 /* LEFT CONTENT */
 
 .hero-content{
-    max-width:550px;
-    z-index:2;
+    max-width:600px;
+    flex:1;
 }
 
 /* TAG */
@@ -428,6 +428,7 @@ main{
 /* RIGHT IMAGE */
 
 .hero-image{
+    flex:1;
     position:relative;
     width:500px;
     height:500px;
@@ -539,7 +540,7 @@ main{
     flex-direction:column;
     align-items:center;
     text-align:center;
-    gap:35px;
+    gap:40px;
     padding:50px 25px;
     min-height:auto;
 }

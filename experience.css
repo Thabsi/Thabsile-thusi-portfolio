@@ -555,92 +555,118 @@ padding:30px 30px 30px 85px;
 }
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
+
+.experience-section{
+    padding:40px 16px;
+}
+
+.right-side{
+    width:100%;
+}
 
 .timeline{
-
-left:22px;
-}
-
-.icon-circle{
-
-width:58px;
-height:58px;
-left:-28px;
-}
-
-.icon-circle i{
-
-font-size:22px;
+    left:26px;
 }
 
 .experience-card{
-
-margin-left:45px;
-padding:25px 20px 25px 55px;
-}
-
-.content h2{
-
-font-size:24px;
-}
-
-.content h3{
-
-font-size:18px;
-}
-
-.stats{
-
-grid-template-columns:1fr;
-}
-
-.left-side p{
-
-font-size:17px;
-max-width:100%;
-}
-}
-
-@media(max-width:480px){
-
-.timeline{
-
-left:18px;
+    width:calc(100% - 45px);
+    margin-left:45px;
+    padding:24px 18px 24px 80px;
+    border-radius:20px;
 }
 
 .icon-circle{
-
-width:50px;
-height:50px;
-left:-24px;
+    width:58px;
+    height:58px;
+    left:-30px;
+    top:24px;
 }
 
 .icon-circle i{
-
-font-size:18px;
+    font-size:24px;
 }
 
-.experience-card{
-
-margin-left:35px;
-padding:20px 18px 20px 45px;
+.timeline-heading{
+    font-size:2.2rem;
+    justify-content:center;
 }
 
 .content h2{
-
-font-size:20px;
+    font-size:30px;
+    line-height:1.3;
 }
 
 .content h3{
+    font-size:18px;
+}
 
-font-size:16px;
+.content p,
+.content li{
+    font-size:17px;
+}
+
+.tags{
+    gap:10px;
+}
+
+.tags span{
+    font-size:14px;
+    padding:8px 16px;
 }
 
 .date{
+    margin-top:20px;
+    font-size:13px;
+    padding:8px 16px;
+}
+}
 
-font-size:12px;
-padding:6px 12px;
+@media (max-width:480px){
+
+.timeline{
+    left:20px;
+}
+
+.experience-card{
+    width:calc(100% - 35px);
+    margin-left:35px;
+    padding:20px 16px 20px 70px;
+}
+
+.icon-circle{
+    width:52px;
+    height:52px;
+    left:-26px;
+}
+
+.icon-circle i{
+    font-size:20px;
+}
+
+.timeline-heading{
+    font-size:1.8rem;
+}
+
+.content h2{
+    font-size:22px;
+}
+
+.content h3{
+    font-size:16px;
+}
+
+.content p{
+    font-size:16px;
+}
+
+.tags span{
+    font-size:13px;
+    padding:6px 14px;
+}
+
+.date{
+    font-size:12px;
 }
 }
 /*==========================

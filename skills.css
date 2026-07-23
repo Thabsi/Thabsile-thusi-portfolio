@@ -441,6 +441,36 @@ main{
     gap:30px;
 }
 
+.cta-content{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.cta-icon{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:#1b1735;
+    border:2px solid #ff2ea6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#ff2ea6;
+    font-size:34px;
+    box-shadow:0 0 20px rgba(255,46,166,.35);
+    margin-bottom:10px;
+}
+
+.cta-icon i{
+    transition:.3s;
+}
+
+.cta-icon:hover{
+    transform:rotate(10deg) scale(1.08);
+    box-shadow:0 0 30px #ff2ea6;
+}
+
 .cta-btn{
     padding:16px 35px;
     background:linear-gradient(135deg,#2DD4BF,#38BDF8);

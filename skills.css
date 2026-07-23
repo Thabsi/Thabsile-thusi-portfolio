@@ -339,6 +339,12 @@ main{
     min-height:460px;
 }
 
+.card,
+.card:hover{
+    box-shadow:none !important;
+    border:1px solid #2DD4BF !important;
+}
+
 .card:hover{
     transform:translateY(-8px) scale(1.02);
     border-color:#2DD4BF;

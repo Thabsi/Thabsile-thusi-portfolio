@@ -311,6 +311,33 @@ main{
     margin-bottom:35px;
 }
 
+/* HERO TECHNOLOGIES */
+
+.hero-tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.hero-tech span{
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    color:#5EEAD4;
+    background:rgba(45,212,191,.08);
+    border:1px solid rgba(45,212,191,.22);
+    transition:.3s ease;
+}
+
+.hero-tech span:hover{
+    transform:translateY(-3px);
+    background:rgba(45,212,191,.16);
+    border-color:#2DD4BF;
+    box-shadow:0 0 15px rgba(45,212,191,.15);
+}
+
 /* BUTTONS */
 
 .buttons{
@@ -328,6 +355,10 @@ main{
     font-size:18px;
     font-weight:600;
     transition:0.4s;
+}
+
+.btn i{
+    margin-left:8px;
 }
 
 .btn:hover{
@@ -358,6 +389,11 @@ main{
     background:rgba(255,255,255,0.05);
     color:#F8FAFC;
     backdrop-filter:blur(10px);
+}
+
+.dark i{
+    margin-left:0;
+    margin-right:8px;
 }
 
 .dark:hover{
@@ -538,12 +574,12 @@ main{
 }
 
 .hero{
-    display:block;
+    display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    gap:40px;
-    padding:50px 25px;
+    gap:45px;
+    padding:60px 25px;
     min-height:auto;
 }
 
@@ -578,7 +614,8 @@ main{
 }
     
 .buttons,
-.social-icons{
+.social-icons
+.hero-tech{
     justify-content:center;
 }
 
@@ -647,6 +684,16 @@ main{
     line-height:1.7;
 }
 
+.hero-tech{
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.hero-tech span{
+    font-size:12px;
+    padding:7px 12px;
+}
+    
 .buttons{
     flex-direction:column;
     align-items:center;
@@ -695,6 +742,14 @@ main{
     gap:25px;
 }
 
+.hero-tech{
+    gap:8px;
+}
+
+.hero-tech span{
+    font-size:11px;
+    padding:6px 10px;
+}
 .hero-image{
     width:270px;
     height:270px;

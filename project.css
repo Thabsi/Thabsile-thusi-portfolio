@@ -352,41 +352,83 @@ main{
     color:#94A3B8;
     line-height:1.7;
     font-size:15px;
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
+/* ==========================
+TECHNOLOGY TAGS
+========================== */
+
+.project-tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 25px;
+}
+
+.project-tech span{
+padding:6px 10px;
+border-radius:15px;
+font-size:12px;
+font-weight:600;
+background(45,212,191,.08);
+color:#2DD4BF;
+border:1px solid rgba(45,212,191,.25);
+transition:.3s ease;
+}
+
+.project-tech span{
+background(45,212,191,.18);
+transform(-2px);
+}
 
 /* BUTTON */
-
-.project-card a{
-    margin-top:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:13px 20px;
-    border:1px solid #2DD4BF;
-    border-radius:12px;
-    color:#2DD4BF;
-    background:rgba(45,212,191,.05);
-    text-decoration:none;
-    font-size:15px;
-    font-weight:600;
-    transition:.3s ease;
+.project-buttons{
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
 }
 
-.project-card a:hover{
-    background:#2DD4BF;
-    color:#03151A;
-    box-shadow:0 0 20px rgba(45,212,191,.3);
+.project-buttons a{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s ease;
 }
 
-.project-card a i{
-    transition:.3s;
+/* LIVE DEMO */
+
+.project-buttons .live-demo{
+    background: #2DD4BF;
+    color: #03151A;
+    border: 1px solid #2DD4BF;
 }
 
-.project-card a:hover i{
-    transform:translate(3px,-3px);
+.project-buttons .live-demo:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(45,212,191,.3);
+}
+
+/* GITHUB */
+
+.project-buttons .github-btn{
+    background: transparent;
+    color: #F8FAFC;
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+.project-buttons .github-btn:hover{
+    border-color: #2DD4BF;
+    color: #2DD4BF;
+    background: rgba(45,212,191,.06);
+    transform: translateY(-3px);
 }
 
 .footer{
@@ -475,6 +517,14 @@ main{
         font-size:23px;
     }
 
+    .project-buttons{ 
+        flex-direction:column; 
+    } 
+    
+    .project-buttons a{ 
+        width:100%; 
+    }
+
 }
 
 /*==========================
@@ -553,6 +603,19 @@ body.light-mode .project-number{
 
 body.light-mode .project-card a{
     background:#ffffff;
+}
+
+/* TECHNOLOGY TAGS */
+
+body.light-mode .project-tech span{
+background(45,212,191,.08);
+}
+
+/* GITHUB BUTTON */
+
+body.light-mode .project-buttons .github-btn{
+color:#0F172A;
+border-color:#CBD5E1;
 }
 
 /* Footer */

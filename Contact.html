@@ -135,7 +135,13 @@
 
   <h2>Send Me A Message</h2>
 
-<form id="contact-form">
+<form action="https://api.web3forms.com/submit" method="POST">
+
+     <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="0d628412-959f-4a3d-85e6-347b08c2160a">
+
+    <!-- Optional subject for your email inbox -->
+    <input type="hidden" name="from_name" value="TT Thabsile Thusi Portfolio">
 
   <input type="text" name="user_name" placeholder="Full Name" required>
 

@@ -379,7 +379,7 @@ button{
     flex-direction:column;
     align-items:flex-start;
     gap:5px;
-    background:#081224 !important;
+    background:#081224;
     transform:translate3d(-100%,0,0);
     visibility:hidden;
     opacity:1;
@@ -527,7 +527,7 @@ button{
   margin-top:5px;
   padding:14px;
   background:#2DD4BF;
-  color:#ffffff important;
+  color:#ffffff !important;
   border-radius:40px;
   font-size:15px;
   font-weight:600;
@@ -541,7 +541,7 @@ button{
 }
   
 .mobile-download i{
-    color:#ffffff important;
+    color:#ffffff !important;
 }
   
 
@@ -639,7 +639,7 @@ body.light-mode .navbar a{
 
 body.light-mode .navbar{
 
-    background:#ffffff;
+    background:#ffffff !important;
 
 }
 

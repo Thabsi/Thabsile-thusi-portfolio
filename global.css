@@ -381,10 +381,14 @@ button{
     overflow-y:auto;
     overflow-x: hidden;
     transform: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
 }
 
 .navbar.active{
-    transform:translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
   
 /* ===========================

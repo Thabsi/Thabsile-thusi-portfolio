@@ -384,7 +384,90 @@ button{
 .navbar.active{
     transform:translateX(0);
 }
+  
+/* ===========================
+   MOBILE MENU HEADER
+=========================== */
 
+.mobile-menu-header{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Light / Dark Mode */
+
+.mobile-theme-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px 0;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.mobile-theme-btn i{
+
+    color:#2DD4BF;
+
+    font-size:17px;
+
+}
+
+
+/* Close Button */
+
+.mobile-close-btn{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:#2DD4BF;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.mobile-close-btn:hover{
+
+    background:rgba(45,212,191,.12);
+
+    transform:rotate(90deg);
+
+}
 /* Menu Links */
 
 .navbar a{
@@ -455,14 +538,12 @@ button{
   color:#081224;
   border-radius:40px;
   font-weight:600;
-  transition:.3s;
-
+  
 }
 
 .mobile-download:hover{
 
   background:#14B8A6;
-  transform:translateY(-2px);
 
 }
 
@@ -553,6 +634,18 @@ body.light-mode .navbar a.active{
 body.light-mode .theme-btn{
 
     background:#f3f4f6;
+
+}
+
+body.light-mode .mobile-theme-btn{
+
+    color:#111827;
+
+}
+
+body.light-mode .mobile-close-btn{
+
+    color:#14B8A6;
 
 }
 

@@ -257,6 +257,7 @@ button{
 
 }
 
+
 /*==================================================
   MENU OVERLAY
 ==================================================*/
@@ -313,6 +314,25 @@ button{
 
 @media (max-width:768px){
 
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+    }
+  
+  html,
+  body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+  main,
+  section,
+  footer {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 /* Header */
 
 .header{
@@ -338,10 +358,11 @@ button{
 /* Show hamburger */
 
 .menu-toggle{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:2000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  z-index:3000;
 }
 
 /* ===========================
@@ -351,34 +372,24 @@ button{
 .navbar{
 
     position:fixed;
-
     top:0;
     left:0;
-
     width:280px;
     max-width:85vw;
     height:100vh;
-
+    box-sizing: border-box;
     background:#081224;
-
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-
     padding:90px 25px 30px;
-
     gap:12px;
-
     transform:translateX(-100%);
-
-    transition:transform .35s ease;
-
+    transition:transform 0.35s ease;
     box-shadow:8px 0 30px rgba(0,0,0,.45);
-
-    z-index:1999;
-
+    z-index:2500;
     overflow-y:auto;
-
+    overflow-x: hidden;
 }
 
 .navbar.active{
@@ -547,6 +558,18 @@ button{
 
 }
 
+.download-btn i,
+.mobile-download i {
+    color: #081224;
+    transition: color 0.3s ease;
+}
+
+/* Hover = WHITE */
+.download-btn:hover i,
+.mobile-download:hover i {
+    color: #ffffff;
+}
+  
 /* Mobile Footer */
 
 .mobile-footer{
@@ -647,6 +670,32 @@ body.light-mode .mobile-close-btn{
 
     color:#14B8A6;
 
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body:not(.light-mode) .download-btn i,
+body:not(.light-mode) .mobile-download i {
+    color: #081224;
+}
+
+
+/* =====================================================
+   LIGHT MODE
+===================================================== */
+
+body.light-mode .download-btn i,
+body.light-mode .mobile-download i {
+    color: #111827;
+}
+
+
+/* Light mode hover = WHITE */
+body.light-mode .download-btn:hover i,
+body.light-mode .mobile-download:hover i {
+    color: #ffffff;
 }
 
 body.light-mode .footer{

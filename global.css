@@ -353,7 +353,6 @@ button{
   display:flex;
   align-items:center;
   justify-content:center;
-  position: relative;
   z-index:2000;
 }
 
@@ -362,33 +361,40 @@ button{
 =========================== */
 
 .navbar{
-
     position:fixed;
     top:0;
     left:0;
     width:280px;
     max-width:85vw;
     height:100vh;
-    box-sizing: border-box;
+    box-sizing:border-box;
     background:#081224;
     display:flex;
     flex-direction:column;
     align-items:flex-start;
     padding:90px 25px 30px;
     gap:12px;
+
+    /* NO SLIDING */
+    transform:none;
+
+    /* Hidden in place */
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity 0.2s ease;
     box-shadow:8px 0 30px rgba(0,0,0,.45);
     z-index:2500;
     overflow-y:auto;
-    overflow-x: hidden;
-    transform: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease;
+    overflow-x:hidden;
 }
 
 .navbar.active{
-    opacity: 1;
-    visibility: visible;
+    /* STAYS IN EXACT SAME POSITION */
+    transform:none;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
 }
   
 /* ===========================

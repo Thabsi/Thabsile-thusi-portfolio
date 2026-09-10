@@ -273,6 +273,26 @@ button{
 
 }
 
+.mobile-theme-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:5px 0;
+
+    color:#ffffff;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.mobile-theme-btn i{
+    color:#2DD4BF;
+    font-size:17px;
+}
+
 /*==================================================
   FOOTER
 ==================================================*/
@@ -679,6 +699,14 @@ body.light-mode .footer{
 
     border-top:1px solid #d1d5db;
 
+}
+
+body.light-mode .mobile-theme-btn{
+    color:#111827;
+}
+
+body.light-mode .mobile-theme-btn i{
+    color:#14B8A6;
 }
 
 body.light-mode .footer p{

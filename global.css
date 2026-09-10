@@ -257,6 +257,14 @@ button{
 
 }
 
+/*==================================================
+  MOBILE MENU HEADER
+  HIDDEN ON DESKTOP
+==================================================*/
+
+.mobile-menu-header{
+    display:none;
+}
 
 /*==================================================
   MENU OVERLAY
@@ -417,14 +425,11 @@ button{
 .mobile-menu-header{
 
     width:100%;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
-    margin-bottom:20px;
+    margin:0 0 5px 0;
+    padding:0;
 
 }
 

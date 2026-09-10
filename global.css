@@ -527,7 +527,7 @@ button{
   margin-top:5px;
   padding:14px;
   background:#2DD4BF;
-  color:#ffffff !important;
+  color:#000000 !important;
   border-radius:40px;
   font-size:15px;
   font-weight:600;
@@ -537,14 +537,15 @@ button{
 .mobile-download:hover{
 
   background:#14B8A6;
+  color:#ffffff !important;
 
 }
   
 .mobile-download i{
-    color:#ffffff !important;
+    color:#000000 !important;
 }
   
-
+  
 /* Hover = WHITE */
 .download-btn:hover i,
 .mobile-download:hover i {

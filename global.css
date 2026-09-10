@@ -344,23 +344,28 @@ button{
     position:fixed !important;
     top:0 !important;
     left:0 !important;
-    width:280px;
-    max-width:85vw;
-    height:100vh;
-    height:100dvh;
-    padding:5px 20px 25px;
-    display:flex;
+    right:auto !important;
+    botton:0 !important;
+    width:280px !important;
+    max-width:85vw !important;
+    height:100vh !important;
+    height:100dvh !important;
+    margin:0 !important;
+    padding:5px 20px 25px !important;
+    display:flex !important;
     flex-direction:column;
     align-items:flex-start;
     gap:5px;
-    background:#081224;
+    background:#081224 !important;
     transform:translate3d(-100%,0,0);
     visibility:hidden;
+    opacity:1;
     pointer-events:none;
+    isolation:isolate;
     transition:
           transform .3s ease,
           visibility 0s linear .3s;
-    z-index:2500;
+    z-index:9999 !important;
     overflow-y:auto;
     overflow-x:hidden;
     overscroll-behavior:contain;
@@ -372,12 +377,13 @@ button{
     top:0 !important;
     bottom:0 !important;
     left:0 !important;
+    right:auto !important;
     height:100vh;
     height:100dvh;
-    transform:translate3d(0,0,0);
+    transform:translateX(0) !important;
     visibility:visible;
     pointer-events:auto;
-    z-index:2500
+    z-index:9999 !important;
 }
   
 /* ===========================
@@ -448,7 +454,7 @@ button{
     display:flex;
     align-items:center;
     gap:12px;
-    padding:10px 10px;
+    padding:10px;
     margin:0;
     border-radius:10px;
     color:#ffffff;

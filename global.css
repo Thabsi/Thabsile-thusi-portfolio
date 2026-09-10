@@ -444,33 +444,25 @@ button{
 
 .mobile-download{
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:10px;
-
-    width:100%;
-
-    margin-top:auto;
-
-    padding:14px;
-
-    background:#2DD4BF;
-
-    color:#081224;
-
-    border-radius:40px;
-
-    font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  margin-top:10px;
+  padding:14px;
+  background:#2DD4BF;
+  color:#081224;
+  border-radius:40px;
+  font-weight:600;
+  transition:.3s;
 
 }
 
 .mobile-download:hover{
 
-    background:#14B8A6;
+  background:#14B8A6;
+  transform:translateY(-2px);
 
 }
 
@@ -479,17 +471,11 @@ button{
 .mobile-footer{
 
     width:100%;
-
     text-align:center;
-
     color:#94A3B8;
-
     font-size:13px;
-
     margin-top:20px;
-
     padding-top:15px;
-
     border-top:1px solid rgba(255,255,255,.10);
 
 }
@@ -539,7 +525,6 @@ body.light-mode{
 body.light-mode .header{
 
     background:rgba(255,255,255,.95);
-
     border-bottom:1px solid #d1d5db;
 
 }
@@ -561,7 +546,6 @@ body.light-mode .navbar a:hover,
 body.light-mode .navbar a.active{
 
     background:#ECFEFF;
-
     color:#14B8A6;
 
 }

@@ -96,3 +96,18 @@ function closeMenu(){
     menu.innerHTML='<i class="fa-solid fa-bars"></i>';
     document.body.style.overflow="";
 }
+
+const mobileCloseBtn = document.getElementById("mobileCloseBtn");
+const navbar = document.getElementById("navbar");
+const menuOverlay = document.getElementById("menu-overlay");
+
+if (mobileCloseBtn) {
+
+    mobileCloseBtn.addEventListener("click", () => {
+
+        navbar.classList.remove("active");
+        menuOverlay.classList.remove("active");
+
+    });
+
+}

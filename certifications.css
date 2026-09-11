@@ -1,0 +1,1030 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.12),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.08),
+        transparent 45%),
+        linear-gradient(
+        135deg,
+        #020617,
+        #081224,
+        #0F172A);
+    color:#F8FAFC;
+}
+
+main{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    width:100%;
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 6%;
+    background:rgba(2,10,30,.75);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* LOGO */
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#2DD4BF;
+    cursor:pointer;
+}
+
+.logo span{
+    color:white;
+    font-size:22px;
+    margin-left:5px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+/* ACTIVE LINE */
+
+.navbar a.active{
+    color:#2DD4BF;
+}
+
+.navbar a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:3px;
+    background:#2DD4BF;
+    border-radius:10px;
+    box-shadow:0 0 15px #2DD4BF;
+}
+
+/* HOVER */
+
+.navbar a:hover{
+    color:#5EEAD4;
+}
+
+/* RIGHT SIDE */
+
+.right-section{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-btn{
+    text-decoration: none;
+    padding:14px 28px;
+    border-radius:40px;
+    border:2px solid #2DD4BF;
+    background:transparent;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+/* ICON */
+
+.download-btn i{
+    margin-right:10px;
+}
+
+/* HOVER EFFECT */
+
+.download-btn:hover{
+    background:#2DD4BF;
+    box-shadow:
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
+    transform:translateY(-2px);
+}
+
+/* LIGHT BUTTON */
+
+.theme-btn{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:2px solid #2DD4BF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.4s;
+    color:#2DD4BF;
+    font-size:22px;
+}
+
+/* GLOW */
+
+.theme-btn:hover{
+    background:#2DD4BF;
+    color:white;
+    box-shadow:
+        0 0 15px #2DD4BF,
+        0 0 35px #2DD4BF;
+    transform:rotate(180deg);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .navbar{
+        gap:20px;
+    }
+
+    .navbar a{
+        font-size:15px;
+    }
+
+    .download-btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+}
+
+@media(max-width:900px){
+
+    .header{
+        flex-direction:column;
+        height:auto;
+        gap:20px;
+        padding:20px;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+/* ==================================================
+   CERTIFICATIONS PAGE
+================================================== */
+
+.certifications-page {
+    width: 100%;
+    min-height: 100vh;
+    padding:150px 8% 80px;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.certifications-hero {
+
+    max-width: 850px;
+    margin:0 auto 70px;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding:8px 18px;
+    border:1px solid rgba(45,212,191,0.35);
+    border-radius: 50px;
+    background:rgba(45,212,191,0.08);
+    color:#2DD4BF;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:22px;
+}
+
+.certifications-hero h1 {
+    font-size:clamp(2.5rem,5vw,4rem);
+    line-height:1.15;
+    font-weight:800;
+    margin-bottom:22px;
+    color:var(--text-color);
+}
+
+.certifications-hero h1 span {
+    color:#2DD4BF;
+    text-shadow:0 0 15px rgba(45,212,191,0.35);
+}
+
+.certifications-hero p {
+    max-width:720px;
+    margin:0 auto;
+    color:var(--text-secondary);
+    font-size:16px;
+    line-height:1.8;
+}
+
+
+/* ==================================================
+   CERTIFICATION GRID
+================================================== */
+
+.certification-grid {
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+}
+
+
+/* ==================================================
+   CERTIFICATION CARD
+================================================== */
+
+.certification-card {
+    position:relative;
+    display:flex;
+    gap:24px;
+    padding:30px;
+    border-radius:22px;
+    background:linear-gradient(145deg,rgba(255,255,255,0.07),
+            rgba(255,255,255,0.025));
+    border:1px solid var(--border-color);
+    backdrop-filter:blur(18px);
+   -webkit-backdrop-filter:blur(18px);
+    overflow:hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.certification-card::before {
+    content:"";
+    position:absolute;
+    width:160px;
+    height:160px;
+    top:-80px;
+    right:-80px;
+    background:rgba(45,212,191,0.10);
+    border-radius:50%;
+    filter:blur(30px);
+    pointer-events:none;
+}
+
+.certification-card:hover {
+    transform:translateY(-8px);
+    border-color:rgba(45,212,191,0.55);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25),
+        0 0 25px rgba(45,212,191,0.10);
+}
+
+/* ==================================================
+   ICON
+================================================== */
+
+.certificate-icon {
+    flex-shrink:0;
+    width:64px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    background:rgba(45,212,191,0.10);
+    border:1px solid rgba(45,212,191,0.30);
+    color:#2DD4BF;
+    font-size:25px;
+    box-shadow:
+        0 0 20px rgba(45,212,191,0.08);
+}
+
+
+.certification-card:hover
+.certificate-icon {
+    background:#2DD4BF;
+    color:#081224;
+    box-shadow:
+        0 0 25px rgba(45,212,191,0.30);
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.certificate-content {
+    position:relative;
+    z-index:1;
+    flex:1;
+}
+
+.certificate-status {
+    display:inline-block;
+    margin-bottom:8px;
+    color:#2DD4BF;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+
+.certificate-content h2 {
+    font-size:21px;
+    line-height:1.4;
+    font-weight:700;
+    margin-bottom:12px;
+    color:var(--text-color);
+}
+
+.certificate-content p {
+    color:var(--text-secondary);
+    font-size:14px;
+    line-height:1.75;
+    margin-bottom:18px;
+}
+
+/* ==================================================
+   CERTIFICATE FOOTER
+================================================== */
+
+.certificate-footer {
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.certificate-footer span {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:var(--text-secondary);
+    font-size:12px;
+}
+
+.certificate-footer i {
+    color:#2DD4BF;
+}
+
+/* ==================================================
+   TECHNOLOGY TAGS
+================================================== */
+
+.technology-tags {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+
+.technology-tags span {
+    padding:6px 10px;
+    border-radius:50px;
+    background:rgba(45,212,191,0.08);
+    border:1px solid rgba(45,212,191,0.20);
+    color:#2DD4BF;
+    font-size:11px;
+    font-weight:600;
+}
+
+/* ==================================================
+   FUTURE CERTIFICATION
+================================================== */
+
+.future-certification {
+    border-style:dashed;
+    opacity:0.85;
+}
+
+.future-certification:hover {
+    opacity:1;
+}
+
+
+/* ==================================================
+   CTA
+================================================== */
+
+.certification-cta {
+    max-width:1200px;
+    margin:70px auto 0;
+    padding:38px 42px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    border-radius:24px;
+    background:linear-gradient(135deg,
+            rgba(45,212,191,0.10),
+            rgba(45,212,191,0.025));
+    border:1px solidrgba(45,212,191,0.25);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+
+.certification-cta span {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#2DD4BF;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+
+.certification-cta h2 {
+    color:var(--text-color);
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+
+.certification-cta p {
+    color:var(--text-secondary);
+    font-size:14px;
+    line-height:1.7;
+    max-width:650px;
+}
+
+.certification-cta > a {
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:13px 22px;
+    border-radius:10px;
+    background:#2DD4BF;
+    color:#081224;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:0.3s ease;
+}
+
+
+.certification-cta > a:hover {
+    background:#14B8A6;
+    color:#ffffff;
+    transform:translateY(-2px);
+}
+
+.footer{
+    margin-top:0px;
+    padding:40px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    color:#8d8d8d;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1024px) {
+
+    .certifications-page {
+        padding:135px 5% 70px;
+    }
+
+    .certification-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:22px;
+    }
+
+    .certification-card {
+        padding:25px;
+        gap:18px;
+    }
+
+    .certificate-icon {
+        width:58px;
+        height:58px;
+        font-size:22px;
+    }
+
+    .certificate-content h2 {
+        font-size:19px;
+    }
+
+    .certification-cta {
+        padding:32px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+  html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ----------------------------------------------
+       MENU BUTTON
+    ---------------------------------------------- */
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: none;
+        border-radius: 10px;
+
+        background: transparent;
+
+        color: var(--text-color);
+
+        font-size: 1.2rem;
+
+        cursor: pointer;
+    }
+
+
+    /* ----------------------------------------------
+       LEFT SLIDE
+    ---------------------------------------------- */
+
+    .mobile-menu {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: min(82%, 340px);
+        height: 100vh;
+
+        z-index: 9999;
+
+        padding: 20px;
+
+        background: rgba(8, 18, 36, 0.97);
+
+        border-right:
+            1px solid
+            rgba(45, 212, 191, 0.18);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        transform: translateX(-100%);
+
+        transition:
+            transform 0.35s ease;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+
+    /* OPEN MENU */
+
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+
+
+    /* ----------------------------------------------
+       MENU HEADER
+    ---------------------------------------------- */
+
+    .mobile-menu-header {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        margin-bottom: 25px;
+    }
+
+
+    .mobile-theme {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding: 9px 13px;
+
+        border: 1px solid
+            rgba(45, 212, 191, 0.25);
+
+        border-radius: 10px;
+
+        background:
+            rgba(45, 212, 191, 0.08);
+
+        color: #2DD4BF;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 0.78rem;
+
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-close {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        border: none;
+
+        border-radius: 10px;
+
+        background:
+            rgba(255, 255, 255, 0.05);
+
+        color: var(--text-color);
+
+        font-size: 1.2rem;
+
+        cursor: pointer;
+    }
+
+
+    /* ----------------------------------------------
+       NAVIGATION
+    ---------------------------------------------- */
+
+    .mobile-nav {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        width: 100%;
+    }
+
+
+    .mobile-nav a {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 11px 14px;
+
+        box-sizing: border-box;
+
+        border-radius: 12px;
+
+        color: var(--text-secondary);
+
+        text-decoration: none;
+
+        font-size: 0.88rem;
+
+        font-weight: 500;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+    }
+
+
+    .mobile-nav a i {
+
+        width: 22px;
+
+        text-align: center;
+
+        color: #2DD4BF;
+
+        font-size: 1rem;
+    }
+
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+
+        background:
+            rgba(45, 212, 191, 0.10);
+
+        color: #2DD4BF;
+    }
+
+
+    /* ----------------------------------------------
+       DOWNLOAD CV
+    ---------------------------------------------- */
+
+    .mobile-download-cv {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        width: 100%;
+
+        min-height: 46px;
+
+        margin-top: 25px;
+
+        box-sizing: border-box;
+
+        border-radius: 11px;
+
+        background: #2DD4BF;
+
+        color: #000000;
+
+        text-decoration: none;
+
+        font-size: 0.82rem;
+
+        font-weight: 700;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+    }
+
+
+    .mobile-download-cv:hover {
+
+        background: #14B8A6;
+
+        color: #ffffff;
+    }
+
+    .certifications-page {
+        width:100%;
+        padding:115px 20px 60px;
+    }
+
+    .certifications-hero {
+        margin-bottom:45px;
+    }
+
+    .certifications-hero h1 {
+        font-size:2.4rem;
+    }
+
+    .certifications-hero p {
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .certification-grid {
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .certification-card {
+        width:100%;
+        box-sizing:border-box;
+        padding:24px;
+        gap:18px;
+    }
+
+    .certification-cta {
+        flex-direction:column;
+        align-items:flex-start;
+        padding:28px;
+        margin-top:50px;
+    }
+
+    .certification-cta > a {
+        width:100%;
+        justify-content:center;
+    }
+
+  .footer{
+       padding:30px 20px;
+       text-align:center;
+}
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+  .mobile-menu {
+        width: min(86%, 320px);
+        padding: 18px;
+    }
+
+
+    .mobile-nav a {
+        min-height: 46px;
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+
+
+    .mobile-download-cv {
+        min-height: 44px;
+        font-size: 0.78rem;
+    }
+
+    .certifications-page {
+        padding:105px 16px 50px;
+    }
+
+    .section-label {
+        font-size:12px;
+        padding:7px 14px;
+    }
+
+    .certifications-hero h1 {
+        font-size:2rem;
+    }
+
+    .certifications-hero p {
+        font-size:13px;
+    }
+
+
+    .certification-card {
+        flex-direction:column;
+        padding:22px;
+        border-radius:18px;
+    }
+
+    .certificate-icon {
+        width:54px;
+        height:54px;
+        border-radius:15px;
+        font-size:20px;
+    }
+
+    .certificate-content h2 {
+        font-size:18px;
+    }
+
+    .certificate-content p {
+        font-size:13px;
+    }
+
+    .certification-cta {
+        padding:24px;
+        border-radius:18px;
+    }
+
+    .certification-cta h2 {
+        font-size:20px;
+    }
+}
+
+/* ==================================================
+   LIGHT MODE
+================================================== */
+
+body.light-mode
+.certification-card {
+    background:rgba(255,255,255,0.75);
+    border-color:rgba(0,0,0,0.10);
+}
+
+body.light-mode
+.certification-card:hover {
+    border-color:rgba(20,184,166,0.55);
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.10);
+}
+
+body.light-mode
+.certification-cta {
+    background:rgba(255,255,255,0.75);
+    border-color:rgba(20,184,166,0.25);
+}
+
+body.light-mode
+.certificate-icon {
+    background:rgba(45,212,191,0.12);
+}
+
+body.light-mode
+.certification-card:hover
+.certificate-icon {
+    color:#ffffff;
+}
+
+/* ----------------------------------------------
+       LIGHT MODE
+    ---------------------------------------------- */
+
+body.light-mode .mobile-menu {
+
+    background:
+        rgba(248, 250, 252, 0.98);
+    border-right-color:
+        rgba(15, 23, 42, 0.10);
+        box-shadow:
+            10px 0 35px
+            rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .mobile-nav a {
+    color: #475569;
+}
+
+body.light-mode .mobile-nav a:hover,
+body.light-mode .mobile-nav a.active {
+    background:
+        rgba(45, 212, 191, 0.10);
+        color: #0F766E;
+}
+
+body.light-mode .mobile-nav a i {
+    color: #0F766E;
+}
+
+body.light-mode .mobile-close {
+    background:
+        rgba(15, 23, 42, 0.05);
+        color: #0F172A;
+}
+
+body.light-mode .mobile-theme {
+    color: #0F766E;
+    border-color:
+        rgba(20, 184, 166, 0.25);
+}
+
+body.light-mode .footer{
+    color:#4b5563;
+    border-top:1px solid #d1d5db;
+}

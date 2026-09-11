@@ -578,6 +578,273 @@ main{
 ================================================== */
 
 @media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ----------------------------------------------
+       MENU BUTTON
+    ---------------------------------------------- */
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: none;
+        border-radius: 10px;
+
+        background: transparent;
+
+        color: var(--text-color);
+
+        font-size: 1.2rem;
+
+        cursor: pointer;
+    }
+
+
+    /* ----------------------------------------------
+       LEFT SLIDE
+    ---------------------------------------------- */
+
+    .mobile-menu {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: min(82%, 340px);
+        height: 100vh;
+
+        z-index: 9999;
+
+        padding: 20px;
+
+        background: rgba(8, 18, 36, 0.97);
+
+        border-right:
+            1px solid
+            rgba(45, 212, 191, 0.18);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        transform: translateX(-100%);
+
+        transition:
+            transform 0.35s ease;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+
+    /* OPEN MENU */
+
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+
+
+    /* ----------------------------------------------
+       MENU HEADER
+    ---------------------------------------------- */
+
+    .mobile-menu-header {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        margin-bottom: 25px;
+    }
+
+
+    .mobile-theme {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding: 9px 13px;
+
+        border: 1px solid
+            rgba(45, 212, 191, 0.25);
+
+        border-radius: 10px;
+
+        background:
+            rgba(45, 212, 191, 0.08);
+
+        color: #2DD4BF;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 0.78rem;
+
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-close {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        border: none;
+
+        border-radius: 10px;
+
+        background:
+            rgba(255, 255, 255, 0.05);
+
+        color: var(--text-color);
+
+        font-size: 1.2rem;
+
+        cursor: pointer;
+    }
+
+
+    /* ----------------------------------------------
+       NAVIGATION
+    ---------------------------------------------- */
+
+    .mobile-nav {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        width: 100%;
+    }
+
+
+    .mobile-nav a {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 11px 14px;
+
+        box-sizing: border-box;
+
+        border-radius: 12px;
+
+        color: var(--text-secondary);
+
+        text-decoration: none;
+
+        font-size: 0.88rem;
+
+        font-weight: 500;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+    }
+
+
+    .mobile-nav a i {
+
+        width: 22px;
+
+        text-align: center;
+
+        color: #2DD4BF;
+
+        font-size: 1rem;
+    }
+
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+
+        background:
+            rgba(45, 212, 191, 0.10);
+
+        color: #2DD4BF;
+    }
+
+
+    /* ----------------------------------------------
+       DOWNLOAD CV
+    ---------------------------------------------- */
+
+    .mobile-download-cv {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        width: 100%;
+
+        min-height: 46px;
+
+        margin-top: 25px;
+
+        box-sizing: border-box;
+
+        border-radius: 11px;
+
+        background: #2DD4BF;
+
+        color: #000000;
+
+        text-decoration: none;
+
+        font-size: 0.82rem;
+
+        font-weight: 700;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+    }
+
+
+    .mobile-download-cv:hover {
+
+        background: #14B8A6;
+
+        color: #ffffff;
+    }
 
     .achievements-page {
 
@@ -657,6 +924,30 @@ main{
 ================================================== */
 
 @media (max-width: 480px) {
+    .mobile-menu {
+
+        width: min(86%, 320px);
+
+        padding: 18px;
+    }
+
+
+    .mobile-nav a {
+
+        min-height: 46px;
+
+        padding: 10px 12px;
+
+        font-size: 0.82rem;
+    }
+
+
+    .mobile-download-cv {
+
+        min-height: 44px;
+
+        font-size: 0.78rem;
+    }
 
     .achievements-page {
 
@@ -811,4 +1102,51 @@ body.light-mode .achievement-cta h2 {
 
 body.light-mode .achievement-cta p {
     color: #475569;
+}
+
+/* ----------------------------------------------
+       LIGHT MODE
+    ---------------------------------------------- */
+
+body.light-mode .mobile-menu {
+
+    background:
+        rgba(248, 250, 252, 0.98);
+    border-right-color:
+        rgba(15, 23, 42, 0.10);
+        box-shadow:
+            10px 0 35px
+            rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .mobile-nav a {
+    color: #475569;
+}
+
+body.light-mode .mobile-nav a:hover,
+body.light-mode .mobile-nav a.active {
+    background:
+        rgba(45, 212, 191, 0.10);
+        color: #0F766E;
+}
+
+body.light-mode .mobile-nav a i {
+    color: #0F766E;
+}
+
+body.light-mode .mobile-close {
+    background:
+        rgba(15, 23, 42, 0.05);
+        color: #0F172A;
+}
+
+body.light-mode .mobile-theme {
+    color: #0F766E;
+    border-color:
+        rgba(20, 184, 166, 0.25);
+}
+
+body.light-mode .footer{
+    color:#4b5563;
+    border-top:1px solid #d1d5db;
 }

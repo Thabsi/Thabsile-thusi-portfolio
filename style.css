@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif; 
+    font-family:'Poppins', sans-serif; 
 }
 
 html{
@@ -581,25 +581,27 @@ main{
     gap:45px;
     padding:60px 25px;
     min-height:auto;
+    overflow:hidden;
 }
 
 /* Image first */
 .hero-image{
+    order:1;
     position:relative;
     right:auto;
     top:auto;
     transform:none;
-    width:320px;
-    height:320px;
-    margin:20px auto 35px;
-}
-.hero-image{
-    order:1;
     width:380px;
     height:380px;
     margin:0 auto;
+    flex:none;
 }
 
+.hero-image img{
+    width:270px;
+    height:270px;
+}
+    
 /* Text second */
 .hero-content{
     order:2;
@@ -617,11 +619,6 @@ main{
 .social-icons
 .hero-tech{
     justify-content:center;
-}
-
-.hero-image img{
-    width:270px;
-    height:270px;
 }
 
 .circle1{
@@ -661,16 +658,20 @@ main{
     text-align:center;
     gap:30px;
     padding:35px 20px;
+    overflow:hidden;
 }
 
 .hero-image{
     width:270px;
     height:270px;
-    margin:18px auto 28px;order:1;
+    margin:18px auto 28px;
+    order:1;
+    flex:none;
 }
 
 .hero-content{
     order:2;
+    width:100%;
 }
 
 .hero-content h1{
@@ -740,10 +741,12 @@ main{
 .hero{
     padding:25px 15px;
     gap:25px;
+    overflow:hidden;
 }
 
 .hero-tech{
     gap:8px;
+    justify-content:center;
 }
 
 .hero-tech span{
@@ -753,6 +756,7 @@ main{
 .hero-image{
     width:270px;
     height:270px;
+    margin:10px auto 20px;
 }
 
 .hero-image img{
@@ -777,10 +781,12 @@ main{
 
 .hero-content h1{
     font-size:2rem;
+    line-height:1.2;
 }
 
 .hero-content p{
     font-size:15px;
+    line-height:1.7;
 }
 
 .btn{

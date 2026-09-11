@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 html{
@@ -338,27 +340,21 @@ main{
     border:1px solid rgba(45,212,191,.15);
     border-radius:22px;
     padding:35px;
-    transition:.35s;
+    transition:all .35s ease;
     display:flex;
     flex-direction:column;
     min-height:360px;
-}
-
-.card,
-.card:hover{
-    box-shadow:none !important;
-    border:1px solid #2DD4BF !important;
+    box-shadow:none;
 }
 
 .card:hover{
-    transform:translateY(-8px) scale(1.02);
+    transform:translateY(-6px);
     border-color:#2DD4BF;
     background:rgba(15,23,42,.85);
     box-shadow:
         0 0 20px rgba(45,212,191,.35),
         0 0 45px rgba(45,212,191,.18),
         0 15px 40px rgba(0,0,0,.35);
-    transition:all .35s ease;
 }
 
 .card-header{
@@ -541,7 +537,11 @@ main{
     grid-template-columns:1fr;
 }
 
-.card,
+.card{
+    max-width:100%;
+    min-height:auto;
+}
+    
 .other-skills-card{
     max-width:100%;
 }
@@ -557,7 +557,7 @@ main{
     justify-content:center;
     align-items:center;
     text-align:center;
-    margin-bottom:20px 0 50px;
+    margin:0 0 50px;
 }
     
 .skills-section{
@@ -823,6 +823,9 @@ body.light-mode .btn.dark{
     border:1px solid #d1d5db;
 }
 
+body.light-mode .item img[alt="GitHub"]{
+    filter:invert(1);
+}
 /* Footer */
 
 body.light-mode .footer{

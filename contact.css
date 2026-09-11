@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 html{
@@ -244,6 +246,14 @@ main{
     line-height:1.8;
 }
 
+.contact-note{
+    max-width:550px;
+    margin-top:12px;
+    color:#94A3B8 !important;
+    font-size:15px !important;
+    line-height:1.7 !important;
+}
+
 /* Contact Cards */
 
 .contact-card{
@@ -396,26 +406,213 @@ main{
 /*responsive*/
 @media(max-width:768px){
 
-.contact-section{
-    grid-template-columns:1fr;
-    padding:60px 20px;
-}
+    .contact-section{
+        width:100%;
+        grid-template-columns:1fr;
+        gap:40px;
+        padding:45px 20px;
+        text-align:center;
+    }
 
-.contact-left{
-    text-align:center;
-}
+    .contact-left{
+        width:100%;
+        max-width:600px;
+        margin:0 auto;
+        text-align:center;
+    }
 
-.contact-left h1{
-    font-size:40px;
-}
+    .contact-tag{
+        padding:11px 20px;
+        font-size:14px;
+        margin-bottom:22px;
+    }
 
-.contact-right{
-    padding:25px;
-}
+    .contact-left h1{
+        font-size:40px;
+        line-height:1.2;
+        margin-bottom:18px;
+    }
 
-.social-icons{
-    justify-content:center;
-}
+    .contact-left p{
+        max-width:500px;
+        margin:0 auto;
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    /* Communication note */
+
+    .contact-note{
+        margin-top:12px !important;
+        font-size:14px !important;
+        line-height:1.7 !important;
+        color:#94A3B8 !important;
+    }
+
+    /* Contact cards */
+
+    .contact-card{
+        width:100%;
+        max-width:520px;
+        margin:20px auto;
+        padding:18px;
+        gap:15px;
+        text-align:left;
+        border-radius:16px;
+    }
+
+    .contact-card i{
+        width:48px;
+        height:48px;
+        min-width:48px;
+        border-radius:14px;
+        font-size:18px;
+    }
+
+    .contact-card h3{
+        font-size:16px;
+        margin-bottom:4px;
+    }
+
+    .contact-card p{
+        font-size:14px;
+        line-height:1.5;
+        word-break:break-word;
+    }
+
+    .contact-card:hover{
+        transform:translateY(-3px);
+    }
+
+    /* Social icons */
+
+    .social-icons{
+        justify-content:center;
+        margin-top:25px;
+    }
+
+    .social-icons a{
+        width:50px;
+        height:50px;
+    }
+
+    /* Form */
+
+    .contact-right{
+        width:100%;
+        max-width:600px;
+        margin:0 auto;
+        padding:25px 20px;
+        border-radius:22px;
+        text-align:left;
+    }
+
+    .contact-right h2{
+        text-align:center;
+        font-size:28px;
+        margin-bottom:25px;
+    }
+
+    .contact-right form{
+        gap:16px;
+    }
+
+    .contact-right input,
+    .contact-right textarea{
+        padding:14px 15px;
+        font-size:14px;
+    }
+
+    .contact-right textarea{
+        height:160px;
+    }
+
+    .contact-right button{
+        padding:14px;
+        font-size:16px;
+    }
+} 
+
+@media(max-width:480px){
+
+    .contact-section{
+        padding:35px 15px;
+        gap:30px;
+    }
+
+    .contact-tag{
+        padding:9px 16px;
+        font-size:13px;
+    }
+
+    .contact-left h1{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .contact-left p{
+        font-size:15px;
+    }
+
+    .contact-note{
+        font-size:13px !important;
+    }
+
+    .contact-card{
+        padding:15px;
+        gap:12px;
+        margin:15px auto;
+    }
+
+    .contact-card i{
+        width:44px;
+        height:44px;
+        min-width:44px;
+        font-size:17px;
+    }
+
+    .contact-card h3{
+        font-size:15px;
+    }
+
+    .contact-card p{
+        font-size:13px;
+    }
+
+    .social-icons{
+        gap:15px;
+        margin-top:20px;
+    }
+
+    .social-icons a{
+        width:46px;
+        height:46px;
+    }
+
+    .contact-right{
+        padding:22px 16px;
+        border-radius:20px;
+    }
+
+    .contact-right h2{
+        font-size:24px;
+        margin-bottom:22px;
+    }
+
+    .contact-right input,
+    .contact-right textarea{
+        padding:13px;
+        font-size:13px;
+    }
+
+    .contact-right textarea{
+        height:145px;
+    }
+
+    .contact-right button{
+        padding:13px;
+        font-size:15px;
+    }
 }
 
 /*==========================

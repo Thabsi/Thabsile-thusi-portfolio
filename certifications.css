@@ -320,6 +320,72 @@ main{
 }
 
 /* ==================================================
+   FEATURED WORDPRESS CERTIFICATION
+================================================== */
+
+.certificate-featured {
+    border-color: rgba(45, 212, 191, 0.30);
+}
+
+.certificate-featured .certificate-icon {
+    background: rgba(45, 212, 191, 0.12);
+    border-color: rgba(45, 212, 191, 0.35);
+}
+
+/* WordPress icon */
+
+.certificate-featured .certificate-icon i {
+    font-size: 28px;
+}
+
+/* Certification status */
+
+.certificate-status i {
+    margin-right: 5px;
+    font-size: 11px;
+}
+
+/* Certificate tags */
+
+.certificate-tags {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* View certificate button */
+
+.certificate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px 17px;
+    border-radius: 10px;
+    background: #2DD4BF;
+    color: #081224;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.certificate-button i {
+    font-size: 13px;
+}
+
+.certificate-button:hover {
+    background: #14B8A6;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 20px rgba(20, 184, 166, 0.25);
+}
+
+/* ==================================================
    ICON
 ================================================== */
 
@@ -573,22 +639,15 @@ main{
 
     .menu-toggle {
         display: flex;
-
         align-items: center;
         justify-content: center;
-
         width: 42px;
         height: 42px;
-
         border: none;
         border-radius: 10px;
-
         background: transparent;
-
         color: var(--text-color);
-
         font-size: 1.2rem;
-
         cursor: pointer;
     }
 
@@ -600,31 +659,19 @@ main{
     .mobile-menu {
 
         position: fixed;
-
         top: 0;
         left: 0;
-
         width: min(82%, 340px);
         height: 100vh;
-
         z-index: 9999;
-
         padding: 20px;
-
         background: rgba(8, 18, 36, 0.97);
-
-        border-right:
-            1px solid
-            rgba(45, 212, 191, 0.18);
-
+        border-right:1px solid rgba(45, 212, 191, 0.18);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-
         transform: translateX(-100%);
-
         transition:
             transform 0.35s ease;
-
         overflow-y: auto;
         overflow-x: hidden;
     }
@@ -642,70 +689,41 @@ main{
     ---------------------------------------------- */
 
     .mobile-menu-header {
-
         display: flex;
-
         align-items: center;
-
         justify-content: space-between;
-
         width: 100%;
-
         margin-bottom: 25px;
     }
 
 
     .mobile-theme {
-
         display: flex;
-
         align-items: center;
-
         gap: 9px;
-
         padding: 9px 13px;
-
-        border: 1px solid
-            rgba(45, 212, 191, 0.25);
-
+        border: 1px solid rgba(45, 212, 191, 0.25);
         border-radius: 10px;
-
-        background:
-            rgba(45, 212, 191, 0.08);
-
+        background:rgba(45, 212, 191, 0.08);
         color: #2DD4BF;
-
         font-family: 'Poppins', sans-serif;
-
         font-size: 0.78rem;
-
         font-weight: 600;
-
         cursor: pointer;
     }
 
 
     .mobile-close {
-
         display: flex;
-
         align-items: center;
         justify-content: center;
-
         width: 40px;
         height: 40px;
-
         border: none;
-
         border-radius: 10px;
-
-        background:
-            rgba(255, 255, 255, 0.05);
-
+        background:rgba(255, 255, 255, 0.05);
         color: var(--text-color);
-
         font-size: 1.2rem;
-
         cursor: pointer;
     }
 
@@ -715,43 +733,26 @@ main{
     ---------------------------------------------- */
 
     .mobile-nav {
-
         display: flex;
-
         flex-direction: column;
-
         gap: 7px;
-
         width: 100%;
     }
 
 
     .mobile-nav a {
-
         display: flex;
-
         align-items: center;
-
         gap: 15px;
-
         width: 100%;
-
         min-height: 48px;
-
         padding: 11px 14px;
-
         box-sizing: border-box;
-
         border-radius: 12px;
-
         color: var(--text-secondary);
-
         text-decoration: none;
-
         font-size: 0.88rem;
-
         font-weight: 500;
-
         transition:
             background 0.25s ease,
             color 0.25s ease;
@@ -759,23 +760,16 @@ main{
 
 
     .mobile-nav a i {
-
         width: 22px;
-
         text-align: center;
-
         color: #2DD4BF;
-
         font-size: 1rem;
     }
 
 
     .mobile-nav a:hover,
     .mobile-nav a.active {
-
-        background:
-            rgba(45, 212, 191, 0.10);
-
+        background:rgba(45, 212, 191, 0.10);
         color: #2DD4BF;
     }
 
@@ -785,35 +779,20 @@ main{
     ---------------------------------------------- */
 
     .mobile-download-cv {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         gap: 9px;
-
         width: 100%;
-
         min-height: 46px;
-
         margin-top: 25px;
-
         box-sizing: border-box;
-
         border-radius: 11px;
-
         background: #2DD4BF;
-
         color: #000000;
-
         text-decoration: none;
-
         font-size: 0.82rem;
-
         font-weight: 700;
-
         transition:
             background 0.25s ease,
             color 0.25s ease;
@@ -821,9 +800,7 @@ main{
 
 
     .mobile-download-cv:hover {
-
         background: #14B8A6;
-
         color: #ffffff;
     }
 
@@ -937,6 +914,11 @@ main{
         font-size:13px;
     }
 
+    .certificate-button {
+         width: 100%;
+         padding: 11px 15px;
+    }
+    
     .certification-cta {
         padding:24px;
         border-radius:18px;

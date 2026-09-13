@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -88,14 +90,10 @@ main{
 /* LOGO */
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    flex-shrink:0;
     color:#2DD4BF;
+    font-weight:bold;
     font-size:22px;
-    font-weight:800;
-    white-space:nowrap;
+    cursor:pointer;
 }
 
 .logo span{
@@ -108,27 +106,18 @@ main{
 .navbar{
     display:flex;
     align-items:center;
-    justify-content:center;
     gap:18px;
-    flex:1;
 }
 
 .navbar a{
     display:flex;
     align-items:center;
-    gap:6px;
-    padding:8px 0;
     text-decoration:none;
     color:#EAF4FF;
     font-size:13px;
     font-weight:500;
-    white-space:nowrap;
     position:relative;
     transition:.3s ease;
-}
-
-.navbar a i{
-    font-size:12px;
 }
 
 /* ACTIVE LINE */
@@ -183,18 +172,16 @@ main{
 /* ICON */
 
 .download-btn i{
-    margin:0;
-    font-size:12px;
+    margin-right:10;
 }
 
 /* HOVER EFFECT */
 
 .download-btn:hover{
     background:#2DD4BF;
-    color:#020617;
     box-shadow:
-        0 0 15px rgba(45,212,191,.5),
-        0 0 30px rgba(45,212,191,.25);
+        0 0 15px #2DD4BF,
+        0 0 30px #2DD4BF;
     transform:translateY(-2px);
 }
 

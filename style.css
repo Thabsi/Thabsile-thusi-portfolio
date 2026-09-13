@@ -101,7 +101,7 @@ main{
 .logo span{
     color:#ffffff;
     font-size:18px;
-    font-weight:600;
+    margin-left:5px;
 }
 /* NAVBAR */
 
@@ -228,14 +228,6 @@ main{
     transform:rotate(180deg);
 }
 
-/* Hide mobile-only elements on desktop */
-
-.menu-toggle,
-.menu-overlay,
-.mobile-menu-header,
-.mobile-download{
-    display:none;
-}
 
 /* RESPONSIVE */
 

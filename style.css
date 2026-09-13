@@ -90,26 +90,18 @@ main{
 .logo{
     display:flex;
     align-items:center;
-    justify-content:center;
-    width:44px;
-    height:44px;
+    gap:6px;
     flex-shrink:0;
-    border:1px solid #2DD4BF;
-    border-radius:12px;
-    background:rgba(45,212,191,.08);
     color:#2DD4BF;
     font-size:22px;
     font-weight:800;
-    letter-spacing:-1px;
     white-space:nowrap;
-    transition:.3s ease;
 }
 
-.logo:hover{
-    background:#2DD4BF;
-    color:#020617;
-    box-shadow:0 0 20px rgba(45,212,191,.35);
-    transform:translateY(-2px);
+.logo span{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
 }
 /* NAVBAR */
 
@@ -176,10 +168,6 @@ main{
 /* DOWNLOAD BUTTON */
 
 .download-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
     padding:10px 16px;
     border:1px solid #2DD4BF;
     border-radius:30px;
@@ -187,8 +175,8 @@ main{
     color:#ffffff;
     font-size:12px;
     font-weight:600;
-    white-space:nowrap;
     text-decoration:none;
+    cursor:pointer;
     transition:.3s ease;
 }
 
@@ -233,7 +221,7 @@ main{
 
 .theme-btn:hover{
     background:#2DD4BF;
-    color:#020617;
+    color:white;
     box-shadow:
         0 0 15px rgba(45,212,191,.5),
         0 0 30px rgba(45,212,191,.25);

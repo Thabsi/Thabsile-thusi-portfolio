@@ -29,6 +29,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
 html{
@@ -36,12 +37,24 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:var(--bg);
-    color:var(--white);
     width:100%;
-    min-height:100vh;
+    max-width:100%;
     overflow-x:hidden;
+    background:
+        radial-gradient(circle at top right,
+        rgba(45,212,191,.12),
+        transparent 35%),
+        radial-gradient(circle at bottom left,
+        rgba(45,212,191,.08),
+        transparent 45%),
+        linear-gradient(135deg,#020617,#081224,#0F172A);
+    color:#F8FAFC;
+}
+
+main{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
 }
 
 img{
@@ -66,6 +79,10 @@ button{
     cursor:pointer;
 }
 
+button,
+a{
+    font-family:'Poppins', sans-serif;
+}
 /*==================================================
   HEADER
 ==================================================*/

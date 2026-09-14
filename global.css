@@ -431,6 +431,8 @@ a{
     pointer-events:auto;
     overflow:auto !important;
     z-index:10000 !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
   
 /* ===========================
@@ -604,6 +606,7 @@ a{
     pointer-events:none;
     z-index:9999;
     transition:opacity .3s ease;
+    touch-action: none;
 }
   
 .menu-overlay.active{

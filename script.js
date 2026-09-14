@@ -137,8 +137,6 @@ const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 
 function openMenu() {
 
-    if (!navbar || !overlay) return;
-
     navbar.classList.add("active");
     overlay.classList.add("active");
 
@@ -146,8 +144,6 @@ function openMenu() {
 
 
 function closeMenu() {
-
-    if (!navbar || !overlay) return;
 
     navbar.classList.remove("active");
     overlay.classList.remove("active");
@@ -183,24 +179,5 @@ if (mobileCloseBtn) {
 if (overlay) {
 
     overlay.addEventListener("click", closeMenu);
-
-}
-
-
-// Close after clicking navigation links
-if (navbar) {
-
-    navbar.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            // Don't interfere with Download CV
-            if (!link.classList.contains("mobile-download")) {
-                closeMenu();
-            }
-
-        });
-
-    });
 
 }

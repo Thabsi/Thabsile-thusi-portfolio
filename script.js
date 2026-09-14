@@ -137,16 +137,18 @@ const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 
 function openMenu() {
 
-    navbar.classList.add("active");
-    overlay.classList.add("active");
+    if (navbar) navbar.classList.add("active");
+    if (overlay) overlay.classList.add("active");
+    document.body.classList.add("no-scroll");
 
 }
 
 
 function closeMenu() {
 
-    navbar.classList.remove("active");
-    overlay.classList.remove("active");
+    if (navbar) navbar.classList.remove("active");
+    if (overlay) overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
 
 }
 
@@ -181,3 +183,9 @@ if (overlay) {
     overlay.addEventListener("click", closeMenu);
 
 }
+
+// Close menu automatically when clicking any nav link
+const navLinks = document.querySelectorAll('#navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});

@@ -3,9 +3,7 @@
 // =====================================================
 
 const cards = document.querySelectorAll('.card');
-
 cards.forEach(card => {
-
     card.addEventListener('mouseenter', () => {
         card.style.boxShadow = '0 0 20px #2DD4BF';
     });
@@ -23,48 +21,31 @@ cards.forEach(card => {
 
 const themeBtn = document.getElementById("themeBtn");
 const themeIcon = document.getElementById("themeIcon");
-
 const mobileThemeBtn = document.getElementById("mobileThemeBtn");
 const mobileThemeIcon = document.getElementById("mobileThemeIcon");
 const mobileThemeText = document.getElementById("mobileThemeText");
 
-
 function updateThemeUI() {
-
     const isLight = document.body.classList.contains("light-mode");
-
     // Desktop
     if (themeIcon) {
-        themeIcon.className = isLight
-            ? "fa-solid fa-moon"
-            : "fa-solid fa-sun";
+        themeIcon.className = isLight ? "fa-solid fa-moon" : "fa-solid fa-sun";
     }
-
     // Mobile
     if (mobileThemeIcon) {
-        mobileThemeIcon.className = isLight
-            ? "fa-solid fa-moon"
-            : "fa-solid fa-sun";
+        mobileThemeIcon.className = isLight ? "fa-solid fa-moon" : "fa-solid fa-sun";
     }
 
     if (mobileThemeText) {
-        mobileThemeText.textContent = isLight
-            ? "Dark Mode"
-            : "Light Mode";
+        mobileThemeText.textContent = isLight ? "Dark Mode" : "Light Mode";
     }
 }
 
 
 function toggleTheme() {
-
     document.body.classList.toggle("light-mode");
-
-    const theme = document.body.classList.contains("light-mode")
-        ? "light"
-        : "dark";
-
+    const theme = document.body.classList.contains("light-mode") ? "light" : "dark";
     localStorage.setItem("theme", theme);
-
     updateThemeUI();
 }
 
@@ -73,14 +54,10 @@ function toggleTheme() {
 if (themeBtn) {
     themeBtn.addEventListener("click", toggleTheme);
 }
-
-
 // Mobile theme button
 if (mobileThemeBtn) {
     mobileThemeBtn.addEventListener("click", toggleTheme);
 }
-
-
 // Load saved theme
 if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
@@ -96,32 +73,22 @@ updateThemeUI();
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
-filterBtns.forEach(btn => {
-
-    btn.addEventListener('click', () => {
-
-        document.querySelectorAll('.filter-btn.active')
-            .forEach(activeBtn => {
+if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn.active').forEach(activeBtn => {
                 activeBtn.classList.remove('active');
             });
+            btn.classList.add('active');
 
-        btn.classList.add('active');
-
-        const filter = btn.getAttribute('data-filter');
-
-        projectCards.forEach(card => {
-
-            const matches =
-                filter === 'all' ||
-                card.getAttribute('data-category') === filter;
-
-            card.style.display = matches ? 'block' : 'none';
-
+            const filter = btn.getAttribute('data-filter');
+            projectCards.forEach(card => {
+                const matches = filter === 'all' || card.getAttribute('data-category') === filter;
+                card.style.display = matches ? 'block' : 'none';
+            });
         });
-
     });
-
-});
+}
 
 
 // =====================================================
@@ -141,7 +108,7 @@ function openMenu() {
     if (overlay) overlay.classList.add("active");
 
     // Store current scroll position to prevent page jump
-    scrollPosition = window.pageYOffset;
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
     // Lock body in place completely for mobile devices
     document.body.style.overflow = "hidden";
@@ -166,7 +133,8 @@ function closeMenu() {
 
 // Hamburger
 if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", (e) => {
+        e.preventDefault();
         if (navbar && navbar.classList.contains("active")) {
             closeMenu();
         } else {
@@ -177,19 +145,16 @@ if (menuToggle) {
 
 // X close button
 if (mobileCloseBtn) {
-    mobileCloseBtn.addEventListener("click", closeMenu);
+    mobileCloseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        closeMenu();
+    });
 }
 
 // Click overlay to close
 if (overlay) {
     overlay.addEventListener("click", closeMenu);
 }
-
-// Close menu automatically when clicking any nav link
-const navLinks = document.querySelectorAll('#navbar a');
-navLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
 
 // Close menu automatically when clicking any nav link
 const navLinks = document.querySelectorAll('#navbar a');

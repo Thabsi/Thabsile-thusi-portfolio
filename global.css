@@ -379,7 +379,8 @@ a{
   font-size:30px;
   color:var(--primary);
   cursor:pointer;
-  z-index:10001
+  z-index:10001 !important;
+  pointer-events: auto !important;
 }
 
 /* ===========================
@@ -433,6 +434,7 @@ a{
     z-index:10000 !important;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
+    overflow-y: auto !important;
 }
   
 /* ===========================
@@ -605,7 +607,7 @@ a{
     visibility:hidden;
     pointer-events:none;
     z-index:9999;
-    transition:opacity .3s ease;
+    transition:opacity 0.3s ease;
     touch-action: none;
 }
   

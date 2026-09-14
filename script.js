@@ -134,55 +134,62 @@ const navbar = document.getElementById("navbar");
 const overlay = document.getElementById("menu-overlay");
 const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 
+let scrollPosition = 0;
 
 function openMenu() {
-
     if (navbar) navbar.classList.add("active");
     if (overlay) overlay.classList.add("active");
-    document.body.classList.add("no-scroll");
 
+    // Store current scroll position to prevent page jump
+    scrollPosition = window.pageYOffset;
+
+    // Lock body in place completely for mobile devices
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
 }
-
 
 function closeMenu() {
-
     if (navbar) navbar.classList.remove("active");
     if (overlay) overlay.classList.remove("active");
-    document.body.classList.remove("no-scroll");
 
+    // Restore body styles
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+
+    // Restore exact scroll position
+    window.scrollTo(0, scrollPosition);
 }
-
 
 // Hamburger
 if (menuToggle) {
-
     menuToggle.addEventListener("click", () => {
-
-        if (navbar.classList.contains("active")) {
+        if (navbar && navbar.classList.contains("active")) {
             closeMenu();
         } else {
             openMenu();
         }
-
     });
-
 }
-
 
 // X close button
 if (mobileCloseBtn) {
-
     mobileCloseBtn.addEventListener("click", closeMenu);
-
 }
-
 
 // Click overlay to close
 if (overlay) {
-
     overlay.addEventListener("click", closeMenu);
-
 }
+
+// Close menu automatically when clicking any nav link
+const navLinks = document.querySelectorAll('#navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
 
 // Close menu automatically when clicking any nav link
 const navLinks = document.querySelectorAll('#navbar a');

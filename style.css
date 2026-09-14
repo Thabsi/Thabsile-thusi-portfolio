@@ -145,7 +145,7 @@ main{
 .right-section{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:20px;
 }
 
 /* DOWNLOAD BUTTON */
@@ -227,6 +227,20 @@ main{
     }
 }
 
+@media(max-width:900px){
+
+    .header{
+        flex-direction:column;
+        height:auto;
+        gap:20px;
+        padding:20px;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
 /* Main */
 /*.main {
   margin-left: 260px;

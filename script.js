@@ -101,34 +101,20 @@ const navbar = document.getElementById("navbar");
 const overlay = document.getElementById("menu-overlay");
 const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 
-let scrollPosition = 0;
-
 function openMenu() {
     if (navbar) navbar.classList.add("active");
     if (overlay) overlay.classList.add("active");
 
-    // Store current scroll position to prevent page jump
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-    // Lock body in place completely for mobile devices
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = "100%";
+    // Lock scroll safely without destroying body layout
+    document.body.classList.add("menu-open");
 }
 
 function closeMenu() {
     if (navbar) navbar.classList.remove("active");
     if (overlay) overlay.classList.remove("active");
 
-    // Restore body styles
-    document.body.style.removeProperty("overflow");
-    document.body.style.removeProperty("position");
-    document.body.style.removeProperty("top");
-    document.body.style.removeProperty("width");
-
-    // Restore exact scroll position
-    window.scrollTo(0, scrollPosition);
+    // Unlock scroll
+    document.body.classList.remove("menu-open");
 }
 
 // Hamburger

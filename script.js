@@ -104,23 +104,18 @@ const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 function openMenu() {
     if (navbar) navbar.classList.add("active");
     if (overlay) overlay.classList.add("active");
-
-    // Lock scroll safely without destroying body layout
-    document.body.classList.add("menu-open");
+    document.body.classList.add("no-scroll");
 }
 
 function closeMenu() {
     if (navbar) navbar.classList.remove("active");
     if (overlay) overlay.classList.remove("active");
-
-    // Unlock scroll
-    document.body.classList.remove("menu-open");
+    document.body.classList.remove("no-scroll");
 }
 
 // Hamburger
 if (menuToggle) {
-    menuToggle.addEventListener("click", (e) => {
-        e.preventDefault();
+    menuToggle.addEventListener("click", () => {
         if (navbar && navbar.classList.contains("active")) {
             closeMenu();
         } else {
@@ -131,10 +126,9 @@ if (menuToggle) {
 
 // X close button
 if (mobileCloseBtn) {
-    mobileCloseBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        closeMenu();
-    });
+
+    mobileCloseBtn.addEventListener("click", closeMenu);
+
 }
 
 // Click overlay to close

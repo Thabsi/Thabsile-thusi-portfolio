@@ -500,9 +500,11 @@ main{
 
     .contact-right{
         width:100%;
+        height: fit-content;
         max-width:600px;
         margin:0 auto;
         padding:25px 20px;
+        padding-bottom: 45px;
         border-radius:22px;
         text-align:left;
     }
